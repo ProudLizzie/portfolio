@@ -8,8 +8,8 @@ import { PageHeader } from '@/components/page-header'
 import { profile, stats, skills, education } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
-  title: 'About — Elena Vaughn',
-  description: 'Background, education, and technical skills of mechanical engineering student Elena Vaughn.',
+  title: 'About — Elizabeth Janicek',
+  description: 'Background, education, and technical skills of mechanical engineering student Elizabeth Janicek.',
 }
 
 export default function AboutPage() {
@@ -42,24 +42,31 @@ export default function AboutPage() {
 
             <div className="space-y-5 text-pretty leading-relaxed text-muted-foreground">
               <p>
-                I&apos;m {profile.name}, a mechanical engineering student at the
-                University of Michigan finishing my senior year. My interest in
-                engineering started with taking things apart — printers, bikes,
-                a very unlucky lawnmower — and never quite putting them back the
-                same way.
+                I am currently a senior studying Mechanical Engineering at the 
+                University of Wisconsin-Madison with an expected graduation of 
+                May 2027. I have completed a certificate in Mathematics, with a 
+                focus on optimization, and am in the process of earning certificates 
+                in Manufacturing and Leadership.
+
               </p>
               <p>
-                Today that curiosity shows up as robotics, precision mechanical
-                design, and sustainable energy systems. I&apos;m most at home moving
-                between CAD, the simulation environment, and the machine shop,
-                closing the gap between what a model predicts and how a part
-                actually behaves.
+                When I&apos;m not busy studying for classes or working as a student assistant 
+                for ME 201, I&apos;m typically found tinkering with projects that blend 
+                creativity and technical skills. Between updating my crochet-based 
+                Etsy Shop, or working with Blender to model an animatronic, I am always 
+                finding new ways to bring my ideas to life!
+
               </p>
               <p>
-                Outside of coursework I lead subsystem design on the Formula SAE
-                team, mentor first-year students in the makerspace, and take on
-                freelance CAD work. I&apos;m looking for a full-time role where I can
-                own hardware from concept through validation.
+                I try to jump into anything and everything that sparks my curiosity. This 
+                was part of my motivation for founding Badgers in Themed Entertainment, a student 
+                org dedicated to the themed entertainment and attractions industry. I have loved 
+                leading a team of innovative engineers, all working together to make memorable
+                experiences for ourselves, and the community.
+              </p>
+              <p>
+                My engineering philosophy is simple: if it doesn't make you smile while it's 
+                working, it's not done yet.
               </p>
 
               <div className="grid grid-cols-3 gap-6 border-t border-border pt-8">
