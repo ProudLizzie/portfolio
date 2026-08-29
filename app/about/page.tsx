@@ -8,8 +8,8 @@ import { PageHeader } from '@/components/page-header'
 import { profile, stats, skills, education, experience, certificates } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
-  title: 'About — Elena Vaughn',
-  description: 'Background, education, and technical skills of mechanical engineering student Elena Vaughn.',
+  title: 'About — Elizabeth Janicek',
+  description: 'Background, education, and technical skills of mechanical engineering student Elizabeth Janicek.',
 }
 
 export default function AboutPage() {
@@ -19,8 +19,8 @@ export default function AboutPage() {
       <main>
         <PageHeader
           eyebrow="About"
-          title="A bit about me"
-          description="Senior mechanical engineering student with a bias toward building, testing, and iterating on real hardware."
+          title="About me"
+          description="Senior mechanical engineering student at University of Wisconsin-Madison, with a bias toward building, testing, and iterating on real hardware."
         />
 
         <section className="mx-auto max-w-6xl px-6 pb-16">
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <div className="space-y-5 text-pretty leading-relaxed text-muted-foreground">
               <p>
                 I&apos;m {profile.name}, a mechanical engineering student at the
-                University of Michigan finishing my senior year. My interest in
+                University of Wisconsin-Madison finishing my senior year. My interest in
                 engineering started with taking things apart — printers, bikes,
                 a very unlucky lawnmower — and never quite putting them back the
                 same way.
