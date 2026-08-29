@@ -9,8 +9,8 @@ import { ContactForm } from '@/components/contact/contact-form'
 import { profile } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
-  title: 'Contact — Elena Vaughn',
-  description: 'Get in touch with Elena Vaughn about mechanical engineering roles, internships, and projects.',
+  title: 'Contact — Elizabeth Janicek',
+  description: 'Get in touch with Elizabeth about mechanical engineering roles, internships, and projects.',
 }
 
 export default function ContactPage() {
