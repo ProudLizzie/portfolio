@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/page-header'
 import { ProjectArchive } from '@/components/projects/project-archive'
 
 export const metadata: Metadata = {
-  title: 'Projects — Elena Vaughn',
+  title: 'Projects — Elizabeth Janicek',
   description: 'A full archive of mechanical engineering projects across key, personal, school, and work categories.',
 }
 
