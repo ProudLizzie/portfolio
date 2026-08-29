@@ -3,11 +3,11 @@ export const profile = {
   role: 'Mechanical Engineering Student',
   location: 'Madison, WI',
   intro:
-    'Senior mechanical engineering student focused on robotics, precision mechanical design, and themed entertainment.',
+    'I am interested in a professional experience where I can use my problem-solving skills and dedication to develop my knowledge in the Mechanical Engineering and Design industry.',
   shortBio:
     'I\u2019m a senior mechanical engineering student at the University of Wisconsin-Madison',
   email: 'eajanicek@gmail.com',
-  linkedin: 'https://linkedin.com/in/example',
+  linkedin: 'https://linkedin.com/in/eajanicek',
   github: 'https://github.com/example',
   resumeUrl: '/resume.pdf',
   portrait: '/images/portrait.png',
@@ -33,24 +33,24 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'six-axis-robotic-arm',
-    title: 'Six-Axis Robotic Arm',
+    slug: 'octo-animatronic',
+    title: '4 DOF Animatronic Octopus',
     description:
-      'A precision desktop manipulator with closed-loop control and a custom inverse-kinematics solver.',
+      'An animatronic with life-like moving tentacles, using iterative prototyping',
     category: 'Key',
-    tags: ['SolidWorks', 'ROS', 'Control Systems', 'FEA'],
+    tags: ['SolidWorks', 'Arduino Controls', 'Plastic Manufacturing', 'FEA'],
     image: '/images/project-robotic-arm.png',
     year: '2025',
   },
   {
-    slug: 'carbon-fiber-quadcopter',
-    title: 'Carbon-Fiber Quadcopter',
+    slug: 'e-o-a-t',
+    title: 'Deburrer End of Arm Tool',
     description:
-      'A lightweight autonomous drone frame optimized for payload capacity and flight stability.',
+      'An extendible EOAT with an interchangable burr, used in a manufacturing plant',
     category: 'Key',
-    tags: ['CFD', 'Composites', 'Fusion 360', 'PID'],
+    tags: ['Pneumatics', 'BOM', 'Assembly Guide'],
     image: '/images/project-drone.png',
-    year: '2024',
+    year: '2025',
   },
   {
     slug: 'micro-wind-turbine',
@@ -147,17 +147,11 @@ export const skills = [
 
 export const education = [
   {
-    school: 'University of Michigan',
+    school: 'University of Wisconsin-Madison',
     degree: 'B.S.E. Mechanical Engineering',
-    period: '2022 — 2026',
-    detail: 'GPA 3.8 / 4.0 · Formula SAE · Robotics Lab research assistant.',
-  },
-  {
-    school: 'Riverside High School',
-    degree: 'STEM Diploma, Robotics Captain',
-    period: '2018 — 2022',
-    detail: 'Led the FIRST Robotics team to a regional championship.',
-  },
+    period: '2023 — 2027',
+    detail: 'GPA 3.86 / 4.0',
+  }
 ]
 
 export const experience = [
