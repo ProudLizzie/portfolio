@@ -16,9 +16,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Elena Vaughn — Mechanical Engineering Portfolio',
+  title: 'Elizabeth Janicek — Mechanical Engineering Portfolio',
   description:
-    'Portfolio of Elena Vaughn, a senior mechanical engineering student focused on robotics, precision design, and sustainable systems.',
+    'Portfolio of Elizabeth Janicek, a senior mechanical engineering student.',
   generator: 'v0.app',
 }
 
