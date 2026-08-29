@@ -1,9 +1,9 @@
 export const profile = {
-  name: 'Elena Vaughn',
+  name: 'Elizabeth Janicek',
   role: 'Mechanical Engineering Student',
-  location: 'Ann Arbor, MI',
+  location: 'Madison, WI',
   intro:
-    'Senior mechanical engineering student focused on robotics, precision mechanical design, and sustainable energy systems. I turn sketches into working, tested hardware.',
+    'Intro text',
   email: 'elena.vaughn@example.com',
   linkedin: 'https://linkedin.com/in/example',
   github: 'https://github.com/example',
