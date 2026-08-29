@@ -1,13 +1,11 @@
 export const profile = {
-  name: 'Elizabeth Janicek',
+  name: 'Elena Vaughn',
   role: 'Mechanical Engineering Student',
-  location: 'Madison, WI',
+  location: 'Ann Arbor, MI',
   intro:
-    'I am interested in a professional experience where I can use my problem-solving skills and dedication to develop my knowledge in the Mechanical Engineering and Design industry.',
-  shortBio:
-    'I\u2019m a senior mechanical engineering student at the University of Wisconsin-Madison',
-  email: 'eajanicek@gmail.com',
-  linkedin: 'https://linkedin.com/in/eajanicek',
+    'Senior mechanical engineering student focused on robotics, precision mechanical design, and sustainable energy systems. I turn sketches into working, tested hardware.',
+  email: 'elena.vaughn@example.com',
+  linkedin: 'https://linkedin.com/in/example',
   github: 'https://github.com/example',
   resumeUrl: '/resume.pdf',
   portrait: '/images/portrait.png',
@@ -33,24 +31,24 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'octo-animatronic',
-    title: '4 DOF Animatronic Octopus',
+    slug: 'six-axis-robotic-arm',
+    title: 'Six-Axis Robotic Arm',
     description:
-      'An animatronic with life-like moving tentacles, using iterative prototyping',
+      'A precision desktop manipulator with closed-loop control and a custom inverse-kinematics solver.',
     category: 'Key',
-    tags: ['SolidWorks', 'Arduino Controls', 'Plastic Manufacturing', 'FEA'],
+    tags: ['SolidWorks', 'ROS', 'Control Systems', 'FEA'],
     image: '/images/project-robotic-arm.png',
     year: '2025',
   },
   {
-    slug: 'e-o-a-t',
-    title: 'Deburrer End of Arm Tool',
+    slug: 'carbon-fiber-quadcopter',
+    title: 'Carbon-Fiber Quadcopter',
     description:
-      'An extendible EOAT with an interchangable burr, used in a manufacturing plant',
+      'A lightweight autonomous drone frame optimized for payload capacity and flight stability.',
     category: 'Key',
-    tags: ['Pneumatics', 'BOM', 'Assembly Guide'],
+    tags: ['CFD', 'Composites', 'Fusion 360', 'PID'],
     image: '/images/project-drone.png',
-    year: '2025',
+    year: '2024',
   },
   {
     slug: 'micro-wind-turbine',
@@ -147,43 +145,17 @@ export const skills = [
 
 export const education = [
   {
-    school: 'University of Wisconsin-Madison',
+    school: 'University of Michigan',
     degree: 'B.S.E. Mechanical Engineering',
-    period: '2023 — 2027',
-    detail: 'GPA 3.86 / 4.0',
-  }
-]
-
-export const experience = [
-  {
-    company: 'Mastermold LLC',
-    role: 'Engineering Intern',
-    period: 'Summer 2025',
-    detail:
-      'Designed and validated a sensor-driven conveyor sortation cell, cutting manual handling time by 30% across the pilot line.',
+    period: '2022 — 2026',
+    detail: 'GPA 3.8 / 4.0 · Formula SAE · Robotics Lab research assistant.',
   },
   {
-    company: 'Busch Gardens Williamsburg',
-    role: 'Leadership Intern, Supply Chain',
-    period: 'Summer 2026',
-    detail:
-      'Redesigned a centrifugal pump impeller using CFD, improving flow efficiency on a client test rig by 12%.',
+    school: 'Riverside High School',
+    degree: 'STEM Diploma, Robotics Captain',
+    period: '2018 — 2022',
+    detail: 'Led the FIRST Robotics team to a regional championship.',
   },
-  {
-    company: 'University of Wisconsin-Madison College of Engineering',
-    role: 'Student Assistant, Intro to Mechanical Engineering',
-    period: '2024 — Present',
-    detail:
-      'Support closed-loop control research on manipulators, building fixtures and running characterization tests.',
-  },
-]
-
-export const certificates = [
-  {
-    name: 'Engineer in Trainint (EIT)',
-    issuer: 'California Board for Engineers',
-    date: '2026',
-  }
 ]
 
 export const navLinks = [
