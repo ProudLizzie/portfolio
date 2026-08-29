@@ -1,12 +1,12 @@
 export const profile = {
-  name: 'Elena Vaughn',
+  name: 'Elizabeth Janicek',
   role: 'Mechanical Engineering Student',
-  location: 'Ann Arbor, MI',
+  location: 'Madison, WI',
   intro:
-    'Senior mechanical engineering student focused on robotics, precision mechanical design, and sustainable energy systems. I turn sketches into working, tested hardware.',
+    'Senior mechanical engineering student focused on robotics, precision mechanical design, and themed entertainment.',
   shortBio:
-    'I\u2019m a senior mechanical engineering student at the University of Michigan who lives between CAD, the simulation environment, and the machine shop. I care about the whole loop \u2014 from first sketch to the test bench \u2014 and about hardware that quietly earns its keep.',
-  email: 'elena.vaughn@example.com',
+    'I\u2019m a senior mechanical engineering student at the University of Wisconsin-Madison',
+  email: 'eajanicek@gmail.com',
   linkedin: 'https://linkedin.com/in/example',
   github: 'https://github.com/example',
   resumeUrl: '/resume.pdf',
@@ -162,23 +162,23 @@ export const education = [
 
 export const experience = [
   {
-    company: 'Rivian Automotive',
-    role: 'Mechanical Engineering Intern',
+    company: 'Mastermold LLC',
+    role: 'Engineering Intern',
     period: 'Summer 2025',
     detail:
       'Designed and validated a sensor-driven conveyor sortation cell, cutting manual handling time by 30% across the pilot line.',
   },
   {
-    company: 'Hydro Dynamics Lab',
-    role: 'Design Contractor',
-    period: '2024 — 2025',
+    company: 'Busch Gardens Williamsburg',
+    role: 'Leadership Intern, Supply Chain',
+    period: 'Summer 2026',
     detail:
       'Redesigned a centrifugal pump impeller using CFD, improving flow efficiency on a client test rig by 12%.',
   },
   {
-    company: 'UM Robotics Laboratory',
-    role: 'Research Assistant',
-    period: '2023 — Present',
+    company: 'University of Wisconsin-Madison College of Engineering',
+    role: 'Student Assistant, Intro to Mechanical Engineering',
+    period: '2024 — Present',
     detail:
       'Support closed-loop control research on manipulators, building fixtures and running characterization tests.',
   },
@@ -186,25 +186,10 @@ export const experience = [
 
 export const certificates = [
   {
-    name: 'Certified SolidWorks Associate (CSWA)',
-    issuer: 'Dassault Syst\u00e8mes',
-    date: '2024',
-  },
-  {
-    name: 'GD&T Fundamentals (ASME Y14.5)',
-    issuer: 'ASME',
-    date: '2024',
-  },
-  {
-    name: 'ANSYS Mechanical FEA Professional',
-    issuer: 'ANSYS Learning',
-    date: '2023',
-  },
-  {
-    name: 'OSHA 10-Hour General Industry Safety',
-    issuer: 'OSHA',
-    date: '2022',
-  },
+    name: 'Engineer in Trainint (EIT)',
+    issuer: 'California Board for Engineers',
+    date: '2026',
+  }
 ]
 
 export const navLinks = [
