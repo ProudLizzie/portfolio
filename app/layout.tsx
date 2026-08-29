@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -9,9 +9,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-jakarta',
   display: 'swap',
 })
 
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`bg-background ${playfair.variable} ${jakarta.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

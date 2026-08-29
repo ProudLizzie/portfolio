@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { PageHeader } from '@/components/page-header'
@@ -20,7 +21,9 @@ export default function ProjectsPage() {
           description="A complete record of what I've designed, machined, and tested. Filter by category or sort to find your way around."
         />
         <section className="mx-auto max-w-6xl px-6 pb-24">
-          <ProjectArchive />
+          <Suspense fallback={null}>
+            <ProjectArchive />
+          </Suspense>
         </section>
       </main>
       <SiteFooter />

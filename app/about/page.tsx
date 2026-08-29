@@ -5,7 +5,7 @@ import { Download } from 'lucide-react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { PageHeader } from '@/components/page-header'
-import { profile, stats, skills, education } from '@/lib/portfolio-data'
+import { profile, stats, skills, education, experience, certificates } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
   title: 'About — Elena Vaughn',

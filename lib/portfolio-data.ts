@@ -4,6 +4,8 @@ export const profile = {
   location: 'Ann Arbor, MI',
   intro:
     'Senior mechanical engineering student focused on robotics, precision mechanical design, and sustainable energy systems. I turn sketches into working, tested hardware.',
+  shortBio:
+    'I\u2019m a senior mechanical engineering student at the University of Michigan who lives between CAD, the simulation environment, and the machine shop. I care about the whole loop \u2014 from first sketch to the test bench \u2014 and about hardware that quietly earns its keep.',
   email: 'elena.vaughn@example.com',
   linkedin: 'https://linkedin.com/in/example',
   github: 'https://github.com/example',
@@ -155,6 +157,53 @@ export const education = [
     degree: 'STEM Diploma, Robotics Captain',
     period: '2018 — 2022',
     detail: 'Led the FIRST Robotics team to a regional championship.',
+  },
+]
+
+export const experience = [
+  {
+    company: 'Rivian Automotive',
+    role: 'Mechanical Engineering Intern',
+    period: 'Summer 2025',
+    detail:
+      'Designed and validated a sensor-driven conveyor sortation cell, cutting manual handling time by 30% across the pilot line.',
+  },
+  {
+    company: 'Hydro Dynamics Lab',
+    role: 'Design Contractor',
+    period: '2024 — 2025',
+    detail:
+      'Redesigned a centrifugal pump impeller using CFD, improving flow efficiency on a client test rig by 12%.',
+  },
+  {
+    company: 'UM Robotics Laboratory',
+    role: 'Research Assistant',
+    period: '2023 — Present',
+    detail:
+      'Support closed-loop control research on manipulators, building fixtures and running characterization tests.',
+  },
+]
+
+export const certificates = [
+  {
+    name: 'Certified SolidWorks Associate (CSWA)',
+    issuer: 'Dassault Syst\u00e8mes',
+    date: '2024',
+  },
+  {
+    name: 'GD&T Fundamentals (ASME Y14.5)',
+    issuer: 'ASME',
+    date: '2024',
+  },
+  {
+    name: 'ANSYS Mechanical FEA Professional',
+    issuer: 'ANSYS Learning',
+    date: '2023',
+  },
+  {
+    name: 'OSHA 10-Hour General Industry Safety',
+    issuer: 'OSHA',
+    date: '2022',
   },
 ]
 

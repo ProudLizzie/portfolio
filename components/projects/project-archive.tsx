@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { projects, type ProjectCategory } from '@/lib/portfolio-data'
 import { ProjectCard } from '@/components/project-card'
@@ -11,7 +12,12 @@ type Sort = 'Newest' | 'Oldest' | 'A–Z'
 const filters: Filter[] = ['All', 'Key', 'Personal', 'School', 'Work']
 
 export function ProjectArchive() {
-  const [filter, setFilter] = useState<Filter>('All')
+  const searchParams = useSearchParams()
+  const initial = searchParams.get('category')
+  const startFilter: Filter = filters.includes(initial as Filter)
+    ? (initial as Filter)
+    : 'All'
+  const [filter, setFilter] = useState<Filter>(startFilter)
   const [sort, setSort] = useState<Sort>('Newest')
 
   const visible = useMemo(() => {
