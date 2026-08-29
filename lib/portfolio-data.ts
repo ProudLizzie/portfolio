@@ -3,9 +3,9 @@ export const profile = {
   role: 'Mechanical Engineering Student',
   location: 'Madison, WI',
   intro:
-    'Intro text',
-  email: 'elena.vaughn@example.com',
-  linkedin: 'https://linkedin.com/in/example',
+    'I am interested in a professional experience where I can use my problem-solving skills and dedication to develop my knowledge in the Mechanical Engineering and Design industry.',
+  email: 'eajanicek@gmail.com',
+  linkedin: 'https://linkedin.com/in/eajanicek',
   github: 'https://github.com/example',
   resumeUrl: '/resume.pdf',
   portrait: '/images/portrait.png',
@@ -31,99 +31,90 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'six-axis-robotic-arm',
-    title: 'Six-Axis Robotic Arm',
+    slug: 'blast-off',
+    title: 'Bucky Blast Off',
     description:
-      'A precision desktop manipulator with closed-loop control and a custom inverse-kinematics solver.',
-    category: 'Key',
-    tags: ['SolidWorks', 'ROS', 'Control Systems', 'FEA'],
+      'A table-top sized pneumatic launching coaster',
+    category: 'School',
+    tags: ['SolidWorks', 'Pneumatic Controls', '3D Printing'],
     image: '/images/project-robotic-arm.png',
     year: '2025',
   },
   {
-    slug: 'carbon-fiber-quadcopter',
-    title: 'Carbon-Fiber Quadcopter',
+    slug: 'dark-ride',
+    title: 'Dark Ride Scenery',
     description:
-      'A lightweight autonomous drone frame optimized for payload capacity and flight stability.',
-    category: 'Key',
-    tags: ['CFD', 'Composites', 'Fusion 360', 'PID'],
+      'An interactive dark ride with painted scenery, modeled props, and small immersive animatronics.',
+    category: 'School',
+    tags: ['Design', 'Modeling', 'Creative'],
     image: '/images/project-drone.png',
-    year: '2024',
-  },
-  {
-    slug: 'micro-wind-turbine',
-    title: 'Micro Wind Turbine',
-    description:
-      'A small-scale turbine and gearbox designed to harvest energy in low-wind urban environments.',
-    category: 'Key',
-    tags: ['MATLAB', 'Aerodynamics', 'Gear Design', '3D Print'],
-    image: '/images/project-turbine.png',
-    year: '2024',
-  },
-  {
-    slug: 'custom-3d-printer',
-    title: 'Custom CoreXY 3D Printer',
-    description:
-      'A ground-up printer build with a rigid frame, linear rails, and a tuned motion system.',
-    category: 'Key',
-    tags: ['Mechanical Design', 'Firmware', 'Motion', 'GD&T'],
-    image: '/images/project-3dprinter.png',
-    year: '2023',
-  },
-  {
-    slug: 'topology-bracket',
-    title: 'Topology-Optimized Bracket',
-    description: 'A weight-reduced aluminum bracket driven by generative design and validated with FEA.',
-    category: 'Personal',
-    tags: ['Generative Design', 'FEA', 'CNC'],
-    image: '/images/build-cad-bracket.png',
     year: '2025',
   },
   {
-    slug: 'planetary-gearbox',
-    title: 'Compact Planetary Gearbox',
-    description: 'A machined 3-stage reduction gearbox designed for a high-torque actuator.',
-    category: 'Personal',
-    tags: ['Gear Design', 'Machining', 'CAD'],
-    image: '/images/build-gearbox.png',
+    slug: 'jelly',
+    title: 'Animatronic Jellyfish',
+    description:
+      'Small scale animatronic Jellyfish to create an immersive ocean feel in a dark ride attraction.',
+    category: 'Key',
+    tags: ['Solidworks', 'Arduino Programming', 'Laser Cutting', '3D Printing'],
+    image: '/images/project-turbine.png',
+    year: '2026',
+  },
+  {
+    slug: 'octo',
+    title: '5 DOF Animatronic Octopus',
+    description:
+      'An animatronic octopus with flexible arms designed with thorough plastic manufacturing iteration',
+    category: 'Key',
+    tags: ['Mechanical Design', 'Life Cycle Study', 'Plastics Manufacturing', 'Iterative Development'],
+    image: '/images/project-3dprinter.png',
+    year: '2026',
+  },
+  {
+    slug: 'logos',
+    title: 'Logos and Designs',
+    description: 'Branding a start up club with iconic logos and designs.',
+    category: 'School',
+    tags: ['Adobe Illustrator', 'Creative', 'Marketing'],
+    image: '/images/build-cad-bracket.png',
     year: '2024',
   },
   {
-    slug: 'fsae-suspension',
-    title: 'FSAE Suspension Upright',
-    description: 'A double-wishbone suspension corner developed for the university Formula SAE team.',
+    slug: 'crane',
+    title: 'Crane Project',
+    description: 'A table top crane capable of lifting 3.5 kilograms using a block and tackle and counterweight system',
     category: 'School',
-    tags: ['Vehicle Dynamics', 'FEA', 'SolidWorks'],
+    tags: ['Gear Design', 'CAD'],
+    image: '/images/build-gearbox.png',
+    year: '2023',
+  },
+  {
+    slug: 'flying-car',
+    title: 'Flying Car Project',
+    description: 'Drawign Designs to 3D model a flying car',
+    category: 'School',
+    tags: ['Solidworks', 'Hand sketching', 'Engineering Drawings'],
     image: '/images/build-suspension.png',
     year: '2024',
   },
   {
-    slug: 'heat-sink-study',
-    title: 'Heat Sink Thermal Study',
-    description: 'A finned heat sink designed and tested against CFD predictions for a coursework lab.',
-    category: 'School',
-    tags: ['Heat Transfer', 'CFD', 'Testing'],
-    image: '/images/build-heatsink.png',
-    year: '2023',
-  },
-  {
-    slug: 'conveyor-automation',
-    title: 'Conveyor Automation Cell',
-    description: 'A sensor-driven conveyor sortation mechanism built during a manufacturing internship.',
+    slug: 'eoat',
+    title: 'End of Arm Tool',
+    description: 'Deburring EOAT to be used at Mastermold LLC to increase productivity of finishing products',
     category: 'Work',
-    tags: ['Automation', 'PLC', 'DFM'],
-    image: '/images/build-conveyor.png',
+    tags: ['Solidworks', 'FEA', 'Testing', 'Manufacturing', 'Bill of Materials', 'Engineering Drawing', 'Assembly Guide'],
+    image: '/images/build-heatsink.png',
     year: '2025',
   },
   {
-    slug: 'centrifugal-pump',
-    title: 'Centrifugal Pump Redesign',
-    description: 'An impeller redesign that improved flow efficiency for a client test rig.',
-    category: 'Work',
-    tags: ['Fluids', 'CFD', 'Prototyping'],
-    image: '/images/build-pump.png',
-    year: '2024',
-  },
+    slug: 'dire-wolf',
+    title: 'Dire Wolf Racing Parts',
+    description: 'Engineering mockups for production Models of railings on a competition sail boat.',
+    category: 'Professional',
+    tags: ['Engineerign Drawings'],
+    image: '/images/build-conveyor.png',
+    year: '2023',
+  }
 ]
 
 export const smallerBuildTabs: {
@@ -131,31 +122,25 @@ export const smallerBuildTabs: {
   label: string
   blurb: string
 }[] = [
-  { key: 'Personal', label: 'Personal Projects', blurb: 'Nights-and-weekends builds driven by curiosity.' },
-  { key: 'School', label: 'School Projects', blurb: 'Coursework and team competition deliverables.' },
+  { key: 'Personal', label: 'Personal Projects', blurb: 'Work driven by a curiosity to learn.' },
+  { key: 'School', label: 'School Projects', blurb: 'Coursework and club deliverables.' },
   { key: 'Work', label: 'Work Projects', blurb: 'Production work from internships and co-ops.' },
 ]
 
 export const skills = [
-  { group: 'CAD & Design', items: ['SolidWorks', 'Fusion 360', 'Onshape', 'GD&T'] },
-  { group: 'Simulation', items: ['ANSYS FEA', 'CFD', 'MATLAB', 'Simulink'] },
-  { group: 'Prototyping', items: ['CNC Machining', '3D Printing', 'Lathe & Mill', 'Composites'] },
-  { group: 'Controls & Code', items: ['Python', 'C++', 'ROS', 'PID Tuning'] },
+  { group: 'Core Mechanical Engineering', items: ['SolidWorks', 'ANSYS', 'Onshape', 'GD&T', 'Blender','FEA Analysis', 'MATLAB', 'Engineering Equation Solver (EES)', 'Design for Manufacturability (DFM)', 'ASTM Standards', 'Six Sigma'] },
+  { group: 'Programming and Computer Science', items: ['Python', 'Java', 'JavaScript', 'HTML', 'SQL', 'C++', 'Simulink Scripting'] },
+  { group: 'Communication and Design', items: ['Microsoft Suite', 'Google Suite', 'Adobe Illustrator', 'Presentational Speaking'] },
+  { group: 'Project Management', items: ['Scheduling', 'Design Review', 'Strategy', 'Risk Management', 'Gantt Chart'] },
 ]
 
 export const education = [
   {
-    school: 'University of Michigan',
-    degree: 'B.S.E. Mechanical Engineering',
-    period: '2022 — 2026',
-    detail: 'GPA 3.8 / 4.0 · Formula SAE · Robotics Lab research assistant.',
-  },
-  {
-    school: 'Riverside High School',
-    degree: 'STEM Diploma, Robotics Captain',
-    period: '2018 — 2022',
-    detail: 'Led the FIRST Robotics team to a regional championship.',
-  },
+    school: 'University of Wisconsin-Madison',
+    degree: 'B.S. Mechanical Engineering',
+    period: '2023 — 2027',
+    detail: 'GPA 3.86 / 4.0',
+  }
 ]
 
 export const navLinks = [
