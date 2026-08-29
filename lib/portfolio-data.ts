@@ -12,9 +12,9 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '18', label: 'Projects Completed' },
-  { value: '4', label: 'Years of Experience' },
-  { value: '9', label: 'Software Tools' },
+  { value: '13', label: 'Projects Completed' },
+  { value: '3', label: 'Years of Experience' },
+  { value: '15', label: 'Software Tools' },
 ]
 
 export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Work'
