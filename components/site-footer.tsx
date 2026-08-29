@@ -17,7 +17,7 @@ export function SiteFooter() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Open to full-time roles and internships in mechanical design, robotics,
-              and product development starting Summer 2026.
+              and product development starting Summer 2027.
             </p>
             <Link
               href={`mailto:${profile.email}`}
