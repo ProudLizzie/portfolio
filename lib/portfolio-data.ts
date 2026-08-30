@@ -63,7 +63,7 @@ export const projects: Project[] = [
         type: 'image',
         src: '/images/build-gearbox.png',
         caption: 'Engineering Expo with Bucky!',
-      }
+      },
     ],
   },
   {
@@ -80,9 +80,9 @@ export const projects: Project[] = [
         type: 'text',
         text: 'I designed the box early first semester, split into 6 sections each 2 ft x 3 ft, there are a total of 5 different rooms for the ride vehicle to traverse throguh. The colored blocks are where we expect show elements to be spaced, and this design overall has helped us visualize the project at a low fidelity scale. ',
       },
-       {
+      {
         type: 'text',
-        text: 'As our team split up to work on different components, I was able to add some decorative elements to the boxes. painting the walls and ground to feel more immersive, as well as sculpting some elements from clay, this scenery will really help pull everything together. I also designed a coral structure and assembled it using a foam board, covered in paper mache and clay to give a coral texture. Moving corals were created using a spherical gear system and twisted spirals, meticulously arranged to give a 'flowing' illusion. In the darker areas of the undersea adventure, I designed an array of fish to be laser cut out, and with the help of LEDs, give a beautiful show of sea creatures. ',
+        text: 'As our team split up to work on different components, I was able to add some decorative elements to the boxes. painting the walls and ground to feel more immersive, as well as sculpting some elements from clay, this scenery will really help pull everything together. I also designed a coral structure and assembled it using a foam board, covered in paper mache and clay to give a coral texture. Moving corals were created using a spherical gear system and twisted spirals, meticulously arranged to give a flowing illusion. In the darker areas of the undersea adventure, I designed an array of fish to be laser cut out, and with the help of LEDs, give a beautiful show of sea creatures. ',
       },
       {
         type: 'imagePair',
@@ -90,7 +90,7 @@ export const projects: Project[] = [
           { src: '/images/project-turbine.png', caption: 'Moving Coral' },
           { src: '/images/build-suspension.png', caption: 'Scenery.' },
         ],
-      }
+      },
     ],
   },
   {
