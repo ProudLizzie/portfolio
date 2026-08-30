@@ -115,7 +115,7 @@ export const projects: Project[] = [
       'Small scale animatronic Jellyfish to create an immersive ocean feel in a dark ride attraction.',
     category: 'Key',
     tags: ['Solidworks', 'Arduino Programming', 'Laser Cutting', '3D Printing'],
-    image: '/images/project-turbine.png',
+    image: '/images/jelly.png',
     year: '2026',
     blocks: [
       {
@@ -124,7 +124,7 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/images/project-3dprinter.png',
+        src: '/images/jelbefaft.jpg',
         caption: 'Jellyfish before and after Decorative elements',
       },
     ],
