@@ -53,26 +53,17 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'Bucky Blast Off is a table-top scale pneumatic launch coaster built to demonstrate how compressed-air actuation can accelerate a cart along a track.',
+        text: 'Our very first club project was a dedication to the city of Madison. Powered by a bike pump, our pneumatic-launch demonstration was a great way to get kids excited about engineering, while I was learning more about engineering, and how to lead a student org.',
+      },
+      {
+        type: 'text',
+        text: 'Personally, I helped out with a lot of the scenery and decorations, as well as designing the ride vehicle. For our presentation at Engineering Expo, I designed and created our club shirts for our team members.',
       },
       {
         type: 'image',
         src: '/images/build-gearbox.png',
-        caption: 'The launch mechanism assembled in SolidWorks.',
-      },
-      {
-        type: 'text',
-        text: 'The project spanned a full CAD assembly, a pneumatic control circuit, and a mix of 3D-printed and laser-cut structural components.',
-      },
-      {
-        type: 'text',
-        text: 'I tuned the launch pressure and release timing through repeated test runs until the cart reliably completed the layout.',
-      },
-      {
-        type: 'image',
-        src: '/images/build-cad-bracket.png',
-        caption: 'Detail of the release-trigger bracket.',
-      },
+        caption: 'Engineering Expo with Bucky!',
+      }
     ],
   },
   {
@@ -83,27 +74,23 @@ export const projects: Project[] = [
     category: 'Academic',
     tags: ['Design', 'Modeling', 'Creative'],
     image: '/images/project-drone.png',
-    year: '2025',
+    year: '2026',
     blocks: [
       {
         type: 'text',
-        text: 'This dark ride project brought together storytelling and engineering to create an immersive guest experience.',
+        text: 'I designed the box early first semester, split into 6 sections each 2 ft x 3 ft, there are a total of 5 different rooms for the ride vehicle to traverse throguh. The colored blocks are where we expect show elements to be spaced, and this design overall has helped us visualize the project at a low fidelity scale. ',
+      },
+       {
+        type: 'text',
+        text: 'As our team split up to work on different components, I was able to add some decorative elements to the boxes. painting the walls and ground to feel more immersive, as well as sculpting some elements from clay, this scenery will really help pull everything together. I also designed a coral structure and assembled it using a foam board, covered in paper mache and clay to give a coral texture. Moving corals were created using a spherical gear system and twisted spirals, meticulously arranged to give a 'flowing' illusion. In the darker areas of the undersea adventure, I designed an array of fish to be laser cut out, and with the help of LEDs, give a beautiful show of sea creatures. ',
       },
       {
         type: 'imagePair',
         images: [
-          { src: '/images/project-turbine.png', caption: 'Scenic prop modeling.' },
-          { src: '/images/build-suspension.png', caption: 'Ride-vehicle linkage study.' },
+          { src: '/images/project-turbine.png', caption: 'Moving Coral' },
+          { src: '/images/build-suspension.png', caption: 'Scenery.' },
         ],
-      },
-      {
-        type: 'text',
-        text: 'I designed and modeled scenic props, hand-painted set pieces, and integrated small animatronic elements that react as the ride vehicle passes.',
-      },
-      {
-        type: 'text',
-        text: 'The goal was to balance theatrical atmosphere with mechanisms that are reliable enough to run repeatedly.',
-      },
+      }
     ],
   },
   {
@@ -118,27 +105,12 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'The animatronic jellyfish was designed to add gentle, lifelike motion to an underwater dark-ride scene.',
+        text: 'Animatronic Jellyfish was my next task for the project. Hopeing to be relatively small, I designed an umbrella-liek mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
       },
       {
         type: 'image',
         src: '/images/project-3dprinter.png',
-        caption: 'Printing the translucent bell.',
-      },
-      {
-        type: 'text',
-        text: 'Using SolidWorks for the mechanism, Arduino for motion control, and a combination of laser cutting and 3D printing for the body, I created a pulsing bell and trailing tentacles driven by a servo linkage.',
-      },
-      {
-        type: 'imagePair',
-        images: [
-          { src: '/images/build-heatsink.png', caption: 'Servo linkage detail.' },
-          { src: '/images/project-drone.png', caption: 'Assembled prototype under test lighting.' },
-        ],
-      },
-      {
-        type: 'text',
-        text: 'Careful attention to translucent materials and lighting sells the illusion of drifting through the ocean.',
+        caption: 'Jellyfish before and after Decorative elements',
       },
     ],
   },
@@ -154,7 +126,7 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'This five-degree-of-freedom animatronic octopus was an exercise in iterative plastics manufacturing.',
+        text: 'Lastly, and most importantly, I had the opportunity to work on our showstopper animatronic: the octopus. Positioned in our final scene, this centerpiece is designed to serve as a striking focal point amid a sea of celebrating fish. My mission was to create a figure with fluid, lifelike movement using limited resources and parts, presenting quite a few engineering challenges.',
       },
       {
         type: 'imagePair',
@@ -165,16 +137,11 @@ export const projects: Project[] = [
       },
       {
         type: 'text',
-        text: 'Each flexible arm went through multiple design cycles to balance range of motion, durability, and manufacturability.',
+        text: 'My base idea was to design thin, flexible joints between 3D-printed segments, allowing the model to bend at specific intersections and greatly simplifying the overall figure. From a test model, I ran extensive calculations and re-prints to achieve the desired range of motion while maintaining structural rigidity. The thin joints proved difficult to print, and even successful prints were incredibly brittle. After many iterations, I finally arrived at a working solution: double walled joints printed at a slightly reduced layer height. Two factors proved critical to preserving a reliable living hinge: ensuring each layer started and ended within the body of the part rather than at the hinge location, and activating the hinge while the plastic was still warm. The moment a part finished printing, I removed it from the bed and carefully flexed each joint in both directions. Once fully cooled, the hinges remained flexible and the result looked fantastic.',
       },
       {
         type: 'text',
-        text: 'I paired mechanical design with a life-cycle study of the plastic components, refining wall thicknesses and joints across successive prototypes until the motion felt natural and the parts held up to repeated actuation.',
-      },
-      {
-        type: 'image',
-        src: '/images/build-pump.png',
-        caption: 'Final actuation testing rig.',
+        text: 'With the hinge mechanism solved, I turned to aesthetics and making the assembly actually look like a tentacle. Designed in Onshape, the shape came together relatively quickly. A bracket and pulley were added at the end to guide the string running through the length of the tentacle. By wrapping the string in opposite directions, the tentacle achieves a beautifully organic, sweeping motion, all driven by a single motor. This paired pretty well with one of my team members octopus body, and overall gave a great effect for our final scene, which will be refined even more next year!',
       },
     ],
   },
@@ -189,16 +156,7 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'I developed the visual identity for Badgers in Themed Entertainment, a student organization I founded.',
-      },
-      {
-        type: 'image',
-        src: '/images/build-conveyor.png',
-        caption: 'Logo family and design assets.',
-      },
-      {
-        type: 'text',
-        text: 'Working in Adobe Illustrator, I created a family of logos, marks, and design assets that communicate the club\u2019s creative, engineering-driven mission. The branding is used across merchandise, presentations, and recruiting materials.',
+        text: 'Starting a club means coming up with a Brand Identity. The main idea was to keep our logos and designs fun and playful, while representing themed entertainment. Here are a few of the fun designs I made over the past couple of years!',
       },
     ],
   },
@@ -214,13 +172,13 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'This table-top crane was designed to lift 3.5 kilograms using a block-and-tackle system paired with a counterweight for stability.',
+        text: 'Goal:​ Build a table-top crane from a given base that can lift 3.5 kg at the fastest speed while conserving the weight of the crane.',
       },
       {
         type: 'imagePair',
         images: [
-          { src: '/images/build-heatsink.png', caption: 'Gear-train layout.' },
-          { src: '/images/build-suspension.png', caption: 'Counterweight arm.' },
+          { src: '/images/build-heatsink.png', caption: 'Original Design.' },
+          { src: '/images/build-suspension.png', caption: 'Final Build' },
         ],
       },
       {
@@ -310,10 +268,6 @@ export const projects: Project[] = [
         type: 'image',
         src: '/images/build-suspension.png',
         caption: 'Railing component drawing.',
-      },
-      {
-        type: 'text',
-        text: 'The focus was on clear, manufacturable engineering drawings that could be handed off for fabrication, ensuring the parts fit the existing hull geometry and met the structural demands of racing.',
       },
     ],
   },
