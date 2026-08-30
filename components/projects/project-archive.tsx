@@ -8,7 +8,7 @@ import { ProjectCard } from '@/components/project-card'
 type Filter = 'All' | ProjectCategory
 type Sort = 'Newest' | 'Oldest' | 'A–Z'
 
-const filters: Filter[] = ['All', 'Key', 'Personal', 'School', 'Work', 'WIP']
+const filters: Filter[] = ['All', 'Key', 'Personal', 'School', 'Professional', 'WIP']
 
 export function ProjectArchive({ initialFilter = 'All' }: { initialFilter?: Filter }) {
   const [filter, setFilter] = useState<Filter>(initialFilter)
