@@ -46,7 +46,7 @@ export function SiteNav() {
             href="/contact"
             className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
           >
-            Let&apos;s Talk
+            Contact
           </Link>
         </div>
 
@@ -80,7 +80,7 @@ export function SiteNav() {
                 onClick={() => setOpen(false)}
                 className="block rounded-full bg-primary px-5 py-2 text-center text-sm font-medium text-primary-foreground"
               >
-                Let&apos;s Talk
+                Contact
               </Link>
             </li>
           </ul>

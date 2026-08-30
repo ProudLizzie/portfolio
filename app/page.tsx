@@ -1,8 +1,9 @@
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/home/hero'
+import { AboutMe } from '@/components/home/about-me'
 import { FeaturedProjects } from '@/components/home/featured-projects'
-import { SmallerBuilds } from '@/components/home/smaller-builds'
+import { GalleryWall } from '@/components/home/gallery-wall'
 import { AboutSnippet } from '@/components/home/about-snippet'
 
 export default function HomePage() {
@@ -11,8 +12,9 @@ export default function HomePage() {
       <SiteNav />
       <main>
         <Hero />
+        <AboutMe />
         <FeaturedProjects />
-        <SmallerBuilds />
+        <GalleryWall />
         <AboutSnippet />
       </main>
       <SiteFooter />

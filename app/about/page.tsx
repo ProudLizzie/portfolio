@@ -5,7 +5,7 @@ import { Download } from 'lucide-react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { PageHeader } from '@/components/page-header'
-import { profile, stats, skills, education } from '@/lib/portfolio-data'
+import { profile, stats, skills, education, experience, certificates } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
   title: 'About — Elizabeth Janicek',
@@ -149,6 +149,53 @@ export default function AboutPage() {
               <Download className="size-4" />
               Download Resume
             </Link>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
+            Experience
+          </h2>
+          <div className="mt-10 space-y-8">
+            {experience.map((item) => (
+              <div
+                key={item.company + item.role}
+                className="grid gap-2 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
+              >
+                <p className="text-sm text-muted-foreground">{item.period}</p>
+                <div>
+                  <h3 className="font-serif text-xl font-semibold text-foreground">
+                    {item.company}
+                  </h3>
+                  <p className="mt-1 font-medium text-primary">{item.role}</p>
+                  <p className="mt-2 leading-relaxed text-muted-foreground">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
+            Certificates
+          </h2>
+          <div className="mt-10 space-y-8">
+            {certificates.map((item) => (
+              <div
+                key={item.name}
+                className="grid gap-2 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
+              >
+                <p className="text-sm text-muted-foreground">{item.date}</p>
+                <div>
+                  <h3 className="font-serif text-xl font-semibold text-foreground">
+                    {item.name}
+                  </h3>
+                  <p className="mt-1 font-medium text-primary">{item.organization}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
