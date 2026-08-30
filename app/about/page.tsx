@@ -134,22 +134,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-
-          <div className="mt-12 flex flex-col items-start gap-4 rounded-3xl bg-primary p-8 text-primary-foreground md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="font-serif text-2xl font-semibold">Want the full resume?</h3>
-              <p className="mt-1 text-primary-foreground/80">
-                Download a one-page PDF with experience, coursework, and references.
-              </p>
-            </div>
-            <Link
-              href={profile.resumeUrl}
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-transform hover:-translate-y-0.5"
-            >
-              <Download className="size-4" />
-              Download Resume
-            </Link>
-          </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-6 py-20">
@@ -196,6 +180,26 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 pb-24">
+          <div className="flex flex-col items-start gap-4 rounded-3xl bg-primary p-8 text-primary-foreground md:flex-row md:items-center md:justify-between md:p-10">
+            <div>
+              <h3 className="font-serif text-2xl font-semibold md:text-3xl">
+                Want the full resume?
+              </h3>
+              <p className="mt-1 text-primary-foreground/80">
+                Download a one-page PDF with experience, coursework, and references.
+              </p>
+            </div>
+            <Link
+              href={profile.resumeUrl}
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-transform hover:-translate-y-0.5"
+            >
+              <Download className="size-4" />
+              Download Resume
+            </Link>
           </div>
         </section>
       </main>

@@ -33,8 +33,9 @@ export function FeaturedProjects() {
               key={project.slug}
               className="group grid items-center gap-8 md:grid-cols-2 md:gap-14"
             >
-              <div
-                className={`relative overflow-hidden rounded-3xl border border-border shadow-sm ${
+              <Link
+                href={`/projects/${project.slug}`}
+                className={`relative block overflow-hidden rounded-3xl border border-border shadow-sm ${
                   i % 2 === 1 ? 'md:order-2' : ''
                 }`}
               >
@@ -47,15 +48,17 @@ export function FeaturedProjects() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-              </div>
+              </Link>
 
               <div className={i % 2 === 1 ? 'md:order-1' : ''}>
                 <span className="text-sm text-muted-foreground">
                   {String(i + 1).padStart(2, '0')} / {project.year}
                 </span>
-                <h3 className="mt-2 font-serif text-3xl font-semibold text-foreground">
-                  {project.title}
-                </h3>
+                <Link href={`/projects/${project.slug}`}>
+                  <h3 className="mt-2 font-serif text-3xl font-semibold text-foreground transition-colors hover:text-primary">
+                    {project.title}
+                  </h3>
+                </Link>
                 <p className="mt-3 max-w-md text-pretty leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
@@ -70,7 +73,7 @@ export function FeaturedProjects() {
                   ))}
                 </div>
                 <Link
-                  href="/projects"
+                  href={`/projects/${project.slug}`}
                   className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80"
                 >
                   View Project
