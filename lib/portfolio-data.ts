@@ -125,7 +125,7 @@ export const projects: Project[] = [
       {
         type: 'image',
         src: '/images/jelbefaft.jpg',
-        caption: 'Jellyfish before and after Decorative elements',
+        caption: 'Jellyfish before and after decorative elements',
       },
     ],
   },
@@ -494,7 +494,7 @@ export const experience = [
     role: 'Leadership Intern, Supply Chain',
     period: 'Summer 2026',
     detail:
-      'Founded and lead a student organization focused on themed entertainment, coordinating a multidisciplinary team through design reviews and hands-on builds.',
+      'Developed an end of Summer development project, working alongside the engineering team, culinary executives, and operations management.',
   }
 ]
 
