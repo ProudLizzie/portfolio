@@ -8,7 +8,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/eajanicek',
   github: 'https://github.com/example',
   resumeUrl: '/resume.pdf',
-  portrait: '/images/portrait.png',
+  portrait: '/images/portrait.jpg',
 }
 
 export const stats = [
