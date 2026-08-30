@@ -17,7 +17,7 @@ export const stats = [
   { value: '15', label: 'Software Tools' },
 ]
 
-export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Professional' | 'WIP'
+export type ProjectCategory = 'Key' | 'Personal' | 'Academic' | 'Professional' | 'WIP'
 
 export type ProjectBlock =
   | { type: 'text'; text: string }
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     slug: 'blast-off',
     title: 'Bucky Blast Off',
     description: 'A table-top sized pneumatic launching coaster',
-    category: 'School',
+    category: 'Academic',
     tags: ['SolidWorks', 'Pneumatic Controls', '3D Printing'],
     image: '/images/project-robotic-arm.png',
     year: '2025',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     title: 'Dark Ride Scenery',
     description:
       'An interactive dark ride with painted scenery, modeled props, and small immersive animatronics.',
-    category: 'School',
+    category: 'Academic',
     tags: ['Design', 'Modeling', 'Creative'],
     image: '/images/project-drone.png',
     year: '2025',
@@ -182,7 +182,7 @@ export const projects: Project[] = [
     slug: 'logos',
     title: 'Logos and Designs',
     description: 'Branding a start up club with iconic logos and designs.',
-    category: 'School',
+    category: 'Academic',
     tags: ['Adobe Illustrator', 'Creative', 'Marketing'],
     image: '/images/build-cad-bracket.png',
     year: '2024',
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     title: 'Crane Project',
     description:
       'A table top crane capable of lifting 3.5 kilograms using a block and tackle and counterweight system',
-    category: 'School',
+    category: 'Academic',
     tags: ['Gear Design', 'CAD'],
     image: '/images/build-gearbox.png',
     year: '2023',
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     slug: 'flying-car',
     title: 'Flying Car Project',
     description: 'Drawing designs to 3D model a flying car',
-    category: 'School',
+    category: 'Academic',
     tags: ['Solidworks', 'Hand sketching', 'Engineering Drawings'],
     image: '/images/build-suspension.png',
     year: '2024',
@@ -473,12 +473,12 @@ export function getWorksInProgress() {
 }
 
 export const smallerBuildTabs: {
-  key: 'Personal' | 'School' | 'Professional'
+  key: 'Personal' | 'Academic' | 'Professional'
   label: string
   blurb: string
 }[] = [
   { key: 'Personal', label: 'Personal Projects', blurb: 'Work driven by a curiosity to learn.' },
-  { key: 'School', label: 'School Projects', blurb: 'Coursework and club deliverables.' },
+  { key: 'Academic', label: 'Academic Projects', blurb: 'Coursework and club deliverables.' },
   { key: 'Professional', label: 'Professional Projects', blurb: 'Production work from internships.' },
 ]
 
