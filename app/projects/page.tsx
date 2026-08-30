@@ -6,11 +6,11 @@ import { ProjectArchive } from '@/components/projects/project-archive'
 
 export const metadata: Metadata = {
   title: 'Projects — Elizabeth Janicek',
-  description: 'A full archive of mechanical engineering projects across key, personal, school, and work categories.',
+  description: 'A full archive of mechanical engineering projects across key, personal, school, and professional categories.',
 }
 
-type Filter = 'All' | 'Key' | 'Personal' | 'School' | 'Work'
-const validFilters: Filter[] = ['All', 'Key', 'Personal', 'School', 'Work']
+type Filter = 'All' | 'Key' | 'Personal' | 'School' | 'Professional'
+const validFilters: Filter[] = ['All', 'Key', 'Personal', 'School', 'Professional']
 
 export default async function ProjectsPage({
   searchParams,

@@ -17,7 +17,7 @@ export const stats = [
   { value: '15', label: 'Software Tools' },
 ]
 
-export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Work' | 'WIP'
+export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Professional' | 'WIP'
 
 export type ProjectBlock =
   | { type: 'text'; text: string }
@@ -262,7 +262,7 @@ export const projects: Project[] = [
     slug: 'eoat',
     title: 'End of Arm Tool',
     description: 'Deburring EOAT to be used at Mastermold LLC to increase productivity of finishing products',
-    category: 'Work',
+    category: 'Professional',
     tags: ['Solidworks', 'FEA', 'Testing', 'Manufacturing', 'Bill of Materials', 'Engineering Drawing', 'Assembly Guide'],
     image: '/images/build-heatsink.png',
     year: '2025',
@@ -297,7 +297,7 @@ export const projects: Project[] = [
     slug: 'dire-wolf',
     title: 'Dire Wolf Racing Parts',
     description: 'Engineering mockups for production models of railings on a competition sail boat.',
-    category: 'Work',
+    category: 'Professional',
     tags: ['Engineering Drawings'],
     image: '/images/build-conveyor.png',
     year: '2023',
@@ -473,13 +473,13 @@ export function getWorksInProgress() {
 }
 
 export const smallerBuildTabs: {
-  key: 'Personal' | 'School' | 'Work'
+  key: 'Personal' | 'School' | 'Professional'
   label: string
   blurb: string
 }[] = [
   { key: 'Personal', label: 'Personal Projects', blurb: 'Work driven by a curiosity to learn.' },
   { key: 'School', label: 'School Projects', blurb: 'Coursework and club deliverables.' },
-  { key: 'Work', label: 'Work Projects', blurb: 'Production work from internships and co-ops.' },
+  { key: 'Professional', label: 'Professional Projects', blurb: 'Production work from internships and co-ops.' },
 ]
 
 export const skills = [
