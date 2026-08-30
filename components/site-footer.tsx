@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Mail, ArrowUpRight } from 'lucide-react'
-import { LinkedinIcon, GithubIcon } from '@/components/brand-icons'
+import { Mail, ArrowUpRight, Download } from 'lucide-react'
+import { LinkedinIcon } from '@/components/brand-icons'
 import { profile } from '@/lib/portfolio-data'
 
 export function SiteFooter() {
@@ -30,7 +30,7 @@ export function SiteFooter() {
 
           <div className="flex flex-col gap-3">
             <SocialLink href={profile.linkedin} icon={<LinkedinIcon className="size-4" />} label="LinkedIn" />
-            <SocialLink href={profile.github} icon={<GithubIcon className="size-4" />} label="GitHub" />
+            <SocialLink href={profile.resumeUrl} icon={<Download className="size-4" />} label="Resume" />
             <SocialLink href={`mailto:${profile.email}`} icon={<Mail className="size-4" />} label="Email" />
           </div>
         </div>

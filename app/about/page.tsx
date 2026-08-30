@@ -138,6 +138,31 @@ export default function AboutPage() {
 
         <section className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
+            Professional Certificates
+          </h2>
+          <div className="mt-10 space-y-8">
+            {certificates.map((item) => (
+              <div
+                key={item.name}
+                className="grid gap-2 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
+              >
+                <p className="text-sm text-muted-foreground">{item.date}</p>
+                <div>
+                  <p className="font-medium text-primary">{item.organization}</p>
+                  <h3 className="mt-1 font-serif text-xl font-semibold text-foreground">
+                    {item.name}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-muted-foreground">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
             Experience
           </h2>
           <div className="mt-10 space-y-8">
@@ -155,28 +180,6 @@ export default function AboutPage() {
                   <p className="mt-2 leading-relaxed text-muted-foreground">
                     {item.detail}
                   </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
-            Certificates
-          </h2>
-          <div className="mt-10 space-y-8">
-            {certificates.map((item) => (
-              <div
-                key={item.name}
-                className="grid gap-2 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
-              >
-                <p className="text-sm text-muted-foreground">{item.date}</p>
-                <div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground">
-                    {item.name}
-                  </h3>
-                  <p className="mt-1 font-medium text-primary">{item.organization}</p>
                 </div>
               </div>
             ))}

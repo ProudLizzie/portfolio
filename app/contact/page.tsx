@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Mail, MapPin } from 'lucide-react'
+import { Mail, Download } from 'lucide-react'
 import { LinkedinIcon } from '@/components/brand-icons'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
@@ -29,10 +29,10 @@ export default function ContactPage() {
       external: true,
     },
     {
-      icon: <MapPin className="size-5" />,
-      label: 'Location',
-      value: profile.location,
-      href: undefined,
+      icon: <Download className="size-5" />,
+      label: 'Resume',
+      value: 'Download PDF',
+      href: profile.resumeUrl,
       external: false,
     },
   ]
