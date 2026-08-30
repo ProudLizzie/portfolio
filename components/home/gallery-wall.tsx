@@ -17,7 +17,8 @@ const aspectPattern = [
 ]
 
 export function GalleryWall() {
-  const items = projects.filter((p) => p.category !== 'Key')
+  // WIP projects live in the Works in Progress section, not the gallery wall.
+  const items = projects.filter((p) => p.category !== 'Key' && p.category !== 'WIP')
 
   return (
     <section className="border-t border-border/60">
