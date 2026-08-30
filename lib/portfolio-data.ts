@@ -7,7 +7,7 @@ export const profile = {
   email: 'eajanicek@gmail.com',
   linkedin: 'https://linkedin.com/in/eajanicek',
   github: 'https://github.com/example',
-  resumeUrl: '/Resumen.pdf',
+  resumeUrl: '/resume.pdf',
   portrait: '/images/portrait.png',
 }
 
