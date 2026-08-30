@@ -57,12 +57,27 @@ export const projects: Project[] = [
       },
       {
         type: 'text',
-        text: 'Personally, I helped out with a lot of the scenery and decorations, as well as designing the ride vehicle. For our presentation at Engineering Expo, I designed and created our club shirts for our team members.',
+        text: 'As this was our very first year, most of my time was dedicated to helping our members. Organizing meeting times, scheduling production deadlines, and training our youngest members in different engineering principles was no easy task. In the end, I am so incredibly proud of the project we were able to put forward.',
+      },
+      {
+        type: 'text',
+        text: 'In my free time, I helped out with a lot of the scenery and decorations, as well as designing the ride vehicle. For our presentation at Engineering Expo, I designed and created our club shirts for our team members.',
       },
       {
         type: 'image',
         src: '/images/build-gearbox.png',
         caption: 'Engineering Expo with Bucky!',
+      },
+      {
+        type: 'text',
+        text: 'Since our first showing, we have made a few design changes, as well. Since our event demonstrations focused on energy conversion, I designed a tall spike for our car to go up. This way kids had a better time understanding that the more energy they put in, the more that will come out and the higher the car will go. I also iterated on the car a bit more, printing the bogeys with resin, and cleaning up the outser shell for a sleek appearance.',
+      },
+      {
+        type: 'imagePair',
+        images:[
+          { src: '/images/project-turbine.png', caption: '' },
+          { src: '/images/build-suspension.png', caption: '' },
+        ],
       },
     ],
   },
@@ -78,7 +93,7 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'I designed the box early first semester, split into 6 sections each 2 ft x 3 ft, there are a total of 5 different rooms for the ride vehicle to traverse throguh. The colored blocks are where we expect show elements to be spaced, and this design overall has helped us visualize the project at a low fidelity scale. ',
+        text: 'I designed the box early fall semester, split into 6 sections each 2 ft x 3 ft, there are a total of 5 different rooms for the ride vehicle to traverse throguh. The colored blocks are where we expect show elements to be spaced, and this design overall has helped us visualize the project at a low fidelity scale. ',
       },
       {
         type: 'text',
@@ -105,7 +120,7 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'Animatronic Jellyfish was my next task for the project. Hopeing to be relatively small, I designed an umbrella-liek mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
+        text: 'Hopeing to be relatively small, I designed an umbrella-liek mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
       },
       {
         type: 'image',
@@ -126,7 +141,7 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'Lastly, and most importantly, I had the opportunity to work on our showstopper animatronic: the octopus. Positioned in our final scene, this centerpiece is designed to serve as a striking focal point amid a sea of celebrating fish. My mission was to create a figure with fluid, lifelike movement using limited resources and parts, presenting quite a few engineering challenges.',
+        text: 'I had the opportunity to work on our showstopper animatronic: the octopus. Positioned in our final scene, this centerpiece is designed to serve as a striking focal point amid a sea of celebrating fish. My mission was to create a figure with fluid, lifelike movement using limited resources and parts, presenting quite a few engineering challenges.',
       },
       {
         type: 'imagePair',
