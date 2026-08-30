@@ -5,7 +5,7 @@ import { Download } from 'lucide-react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { PageHeader } from '@/components/page-header'
-import { profile, stats, skills, education } from '@/lib/portfolio-data'
+import { profile, stats, skills, education, experience, certificates } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
   title: 'About — Elizabeth Janicek',
@@ -134,10 +134,64 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </section>
 
-          <div className="mt-12 flex flex-col items-start gap-4 rounded-3xl bg-primary p-8 text-primary-foreground md:flex-row md:items-center md:justify-between">
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
+            Professional Certificates
+          </h2>
+          <div className="mt-10 space-y-8">
+            {certificates.map((item) => (
+              <div
+                key={item.name}
+                className="grid gap-2 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
+              >
+                <p className="text-sm text-muted-foreground">{item.date}</p>
+                <div>
+                  <p className="font-medium text-primary">{item.organization}</p>
+                  <h3 className="mt-1 font-serif text-xl font-semibold text-foreground">
+                    {item.name}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-muted-foreground">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
+            Experience
+          </h2>
+          <div className="mt-10 space-y-8">
+            {experience.map((item) => (
+              <div
+                key={item.company + item.role}
+                className="grid gap-2 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
+              >
+                <p className="text-sm text-muted-foreground">{item.period}</p>
+                <div>
+                  <h3 className="font-serif text-xl font-semibold text-foreground">
+                    {item.company}
+                  </h3>
+                  <p className="mt-1 font-medium text-primary">{item.role}</p>
+                  <p className="mt-2 leading-relaxed text-muted-foreground">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 pb-24">
+          <div className="flex flex-col items-start gap-4 rounded-3xl bg-primary p-8 text-primary-foreground md:flex-row md:items-center md:justify-between md:p-10">
             <div>
-              <h3 className="font-serif text-2xl font-semibold">Want the full resume?</h3>
+              <h3 className="font-serif text-2xl font-semibold md:text-3xl">
+                Want the full resume?
+              </h3>
               <p className="mt-1 text-primary-foreground/80">
                 Download a one-page PDF with experience, coursework, and references.
               </p>

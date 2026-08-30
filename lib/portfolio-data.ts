@@ -19,6 +19,11 @@ export const stats = [
 
 export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Work'
 
+export type ProjectBlock =
+  | { type: 'text'; text: string }
+  | { type: 'image'; src: string; caption?: string }
+  | { type: 'imagePair'; images: { src: string; caption?: string }[] }
+
 export type Project = {
   slug: string
   title: string
@@ -27,18 +32,42 @@ export type Project = {
   tags: string[]
   image: string
   year: string
+  blocks: ProjectBlock[]
 }
 
 export const projects: Project[] = [
   {
     slug: 'blast-off',
     title: 'Bucky Blast Off',
-    description:
-      'A table-top sized pneumatic launching coaster',
+    description: 'A table-top sized pneumatic launching coaster',
     category: 'School',
     tags: ['SolidWorks', 'Pneumatic Controls', '3D Printing'],
     image: '/images/project-robotic-arm.png',
     year: '2025',
+    blocks: [
+      {
+        type: 'text',
+        text: 'Bucky Blast Off is a table-top scale pneumatic launch coaster built to demonstrate how compressed-air actuation can accelerate a cart along a track.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-gearbox.png',
+        caption: 'The launch mechanism assembled in SolidWorks.',
+      },
+      {
+        type: 'text',
+        text: 'The project spanned a full CAD assembly, a pneumatic control circuit, and a mix of 3D-printed and laser-cut structural components.',
+      },
+      {
+        type: 'text',
+        text: 'I tuned the launch pressure and release timing through repeated test runs until the cart reliably completed the layout.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-cad-bracket.png',
+        caption: 'Detail of the release-trigger bracket.',
+      },
+    ],
   },
   {
     slug: 'dark-ride',
@@ -49,6 +78,27 @@ export const projects: Project[] = [
     tags: ['Design', 'Modeling', 'Creative'],
     image: '/images/project-drone.png',
     year: '2025',
+    blocks: [
+      {
+        type: 'text',
+        text: 'This dark ride project brought together storytelling and engineering to create an immersive guest experience.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/project-turbine.png', caption: 'Scenic prop modeling.' },
+          { src: '/images/build-suspension.png', caption: 'Ride-vehicle linkage study.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'I designed and modeled scenic props, hand-painted set pieces, and integrated small animatronic elements that react as the ride vehicle passes.',
+      },
+      {
+        type: 'text',
+        text: 'The goal was to balance theatrical atmosphere with mechanisms that are reliable enough to run repeatedly.',
+      },
+    ],
   },
   {
     slug: 'jelly',
@@ -59,6 +109,32 @@ export const projects: Project[] = [
     tags: ['Solidworks', 'Arduino Programming', 'Laser Cutting', '3D Printing'],
     image: '/images/project-turbine.png',
     year: '2026',
+    blocks: [
+      {
+        type: 'text',
+        text: 'The animatronic jellyfish was designed to add gentle, lifelike motion to an underwater dark-ride scene.',
+      },
+      {
+        type: 'image',
+        src: '/images/project-3dprinter.png',
+        caption: 'Printing the translucent bell.',
+      },
+      {
+        type: 'text',
+        text: 'Using SolidWorks for the mechanism, Arduino for motion control, and a combination of laser cutting and 3D printing for the body, I created a pulsing bell and trailing tentacles driven by a servo linkage.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/build-heatsink.png', caption: 'Servo linkage detail.' },
+          { src: '/images/project-drone.png', caption: 'Assembled prototype under test lighting.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'Careful attention to translucent materials and lighting sells the illusion of drifting through the ocean.',
+      },
+    ],
   },
   {
     slug: 'octo',
@@ -69,6 +145,32 @@ export const projects: Project[] = [
     tags: ['Mechanical Design', 'Life Cycle Study', 'Plastics Manufacturing', 'Iterative Development'],
     image: '/images/project-3dprinter.png',
     year: '2026',
+    blocks: [
+      {
+        type: 'text',
+        text: 'This five-degree-of-freedom animatronic octopus was an exercise in iterative plastics manufacturing.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/project-robotic-arm.png', caption: 'Early arm articulation prototype.' },
+          { src: '/images/build-gearbox.png', caption: 'Drive mechanism for the arms.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'Each flexible arm went through multiple design cycles to balance range of motion, durability, and manufacturability.',
+      },
+      {
+        type: 'text',
+        text: 'I paired mechanical design with a life-cycle study of the plastic components, refining wall thicknesses and joints across successive prototypes until the motion felt natural and the parts held up to repeated actuation.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-pump.png',
+        caption: 'Final actuation testing rig.',
+      },
+    ],
   },
   {
     slug: 'logos',
@@ -78,24 +180,77 @@ export const projects: Project[] = [
     tags: ['Adobe Illustrator', 'Creative', 'Marketing'],
     image: '/images/build-cad-bracket.png',
     year: '2024',
+    blocks: [
+      {
+        type: 'text',
+        text: 'I developed the visual identity for Badgers in Themed Entertainment, a student organization I founded.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-conveyor.png',
+        caption: 'Logo family and design assets.',
+      },
+      {
+        type: 'text',
+        text: 'Working in Adobe Illustrator, I created a family of logos, marks, and design assets that communicate the club\u2019s creative, engineering-driven mission. The branding is used across merchandise, presentations, and recruiting materials.',
+      },
+    ],
   },
   {
     slug: 'crane',
     title: 'Crane Project',
-    description: 'A table top crane capable of lifting 3.5 kilograms using a block and tackle and counterweight system',
+    description:
+      'A table top crane capable of lifting 3.5 kilograms using a block and tackle and counterweight system',
     category: 'School',
     tags: ['Gear Design', 'CAD'],
     image: '/images/build-gearbox.png',
     year: '2023',
+    blocks: [
+      {
+        type: 'text',
+        text: 'This table-top crane was designed to lift 3.5 kilograms using a block-and-tackle system paired with a counterweight for stability.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/build-heatsink.png', caption: 'Gear-train layout.' },
+          { src: '/images/build-suspension.png', caption: 'Counterweight arm.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'The project focused on gear design and mechanical advantage, with full CAD modeling to validate the geometry before building. Testing confirmed the crane could lift its target load smoothly without tipping.',
+      },
+    ],
   },
   {
     slug: 'flying-car',
     title: 'Flying Car Project',
-    description: 'Drawign Designs to 3D model a flying car',
+    description: 'Drawing designs to 3D model a flying car',
     category: 'School',
     tags: ['Solidworks', 'Hand sketching', 'Engineering Drawings'],
     image: '/images/build-suspension.png',
     year: '2024',
+    blocks: [
+      {
+        type: 'text',
+        text: 'A conceptual design exercise that started from hand sketches and progressed into a full SolidWorks 3D model of a flying car.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-cad-bracket.png',
+        caption: 'Sketch translated into CAD geometry.',
+      },
+      {
+        type: 'text',
+        text: 'The project emphasized translating freehand ideation into precise engineering drawings, developing my ability to move fluidly between creative concept and dimensioned CAD geometry.',
+      },
+      {
+        type: 'image',
+        src: '/images/project-drone.png',
+        caption: 'Rendered concept model.',
+      },
+    ],
   },
   {
     slug: 'eoat',
@@ -105,15 +260,56 @@ export const projects: Project[] = [
     tags: ['Solidworks', 'FEA', 'Testing', 'Manufacturing', 'Bill of Materials', 'Engineering Drawing', 'Assembly Guide'],
     image: '/images/build-heatsink.png',
     year: '2025',
+    blocks: [
+      {
+        type: 'text',
+        text: 'During my internship at Mastermold LLC, I designed and tested a deburring end-of-arm tool (EOAT) to increase the productivity of finishing operations.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-pump.png',
+        caption: 'EOAT mounted for testing.',
+      },
+      {
+        type: 'text',
+        text: 'The work covered the full engineering package: SolidWorks modeling, FEA to validate loading, and physical testing on the floor.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/build-gearbox.png', caption: 'FEA loading study.' },
+          { src: '/images/build-cad-bracket.png', caption: 'Mounting bracket detail.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'I delivered a bill of materials, engineering drawings, and an assembly guide so the tool could be reproduced and maintained.',
+      },
+    ],
   },
   {
     slug: 'dire-wolf',
     title: 'Dire Wolf Racing Parts',
-    description: 'Engineering mockups for production Models of railings on a competition sail boat.',
-    category: 'Professional',
+    description: 'Engineering mockups for production models of railings on a competition sail boat.',
+    category: 'Work',
     tags: ['Engineering Drawings'],
     image: '/images/build-conveyor.png',
     year: '2023',
+    blocks: [
+      {
+        type: 'text',
+        text: 'I produced engineering mockups and production-ready models for railing components on a competition sailboat.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-suspension.png',
+        caption: 'Railing component drawing.',
+      },
+      {
+        type: 'text',
+        text: 'The focus was on clear, manufacturable engineering drawings that could be handed off for fabrication, ensuring the parts fit the existing hull geometry and met the structural demands of racing.',
+      },
+    ],
   },
   {
     slug: 'ornament',
@@ -123,6 +319,21 @@ export const projects: Project[] = [
     tags: ['Laser Cutting', 'Adobe Illustrator'],
     image: '/images/build-conveyor.png',
     year: '2023',
+    blocks: [
+      {
+        type: 'text',
+        text: 'A layered, laser-cut ornament celebrating Camp Randall Stadium.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-cad-bracket.png',
+        caption: 'Stacked laser-cut layers.',
+      },
+      {
+        type: 'text',
+        text: 'I designed the artwork in Adobe Illustrator and translated it into stacked laser-cut layers that give the ornament depth and dimension. It is a small keepsake project that blends my love of my school with precise digital fabrication.',
+      },
+    ],
   },
   {
     slug: 'gingerbread',
@@ -132,6 +343,23 @@ export const projects: Project[] = [
     tags: ['Onshape', 'Laser Cutting', 'Creative'],
     image: '/images/build-conveyor.png',
     year: '2024',
+    blocks: [
+      {
+        type: 'text',
+        text: 'These collapsible gingerbread houses are laser-cut decorations designed to assemble and break down flat for easy storage.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/build-gearbox.png', caption: 'Interlocking panel layout.' },
+          { src: '/images/build-heatsink.png', caption: 'Assembled house.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'Modeled in Onshape, the interlocking panels snap together without glue. The project was a fun way to combine parametric CAD with festive, giftable design.',
+      },
+    ],
   },
   {
     slug: 'litho-lamp',
@@ -141,17 +369,63 @@ export const projects: Project[] = [
     tags: ['3D Printing', 'Resin Printing', 'Creative'],
     image: '/images/build-conveyor.png',
     year: '2025',
+    blocks: [
+      {
+        type: 'text',
+        text: 'A resin-printed lithophane lamp that reveals hidden photographs when illuminated.',
+      },
+      {
+        type: 'image',
+        src: '/images/project-3dprinter.png',
+        caption: 'Resin printing the lithophane shade.',
+      },
+      {
+        type: 'text',
+        text: 'I designed both the lampshade and stand, tuning the lithophane thickness so cherished photo moments appear only when the light turns on.',
+      },
+      {
+        type: 'image',
+        src: '/images/build-pump.png',
+        caption: 'Assembled lamp base.',
+      },
+      {
+        type: 'text',
+        text: 'The project explored the optical properties of resin prints alongside a functional, sculptural form.',
+      },
+    ],
   },
   {
     slug: 'crochet',
     title: 'Crochet Projects',
-    description: 'A selection of my favorite crochet projects, some of which are on my Etsy shop, with sales in over 14 countries.',
+    description:
+      'A selection of my favorite crochet projects, some of which are on my Etsy shop, with sales in over 14 countries.',
     category: 'Personal',
     tags: ['Creative', 'Marketing'],
     image: '/images/build-conveyor.png',
     year: '2020 - Present',
-  }
+    blocks: [
+      {
+        type: 'text',
+        text: 'An ongoing collection of my favorite crochet projects, many of which I sell through my Etsy shop with sales in over 14 countries.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/images/build-cad-bracket.png', caption: 'A few finished pieces.' },
+          { src: '/images/build-suspension.png', caption: 'Work in progress.' },
+        ],
+      },
+      {
+        type: 'text',
+        text: 'Beyond the craft itself, running the shop has taught me about product design, marketing, and fulfillment. It is a creative outlet that keeps my hands busy and my design instincts sharp.',
+      },
+    ],
+  },
 ]
+
+export function getProject(slug: string) {
+  return projects.find((p) => p.slug === slug)
+}
 
 export const smallerBuildTabs: {
   key: 'Personal' | 'School' | 'Work'
@@ -179,9 +453,56 @@ export const education = [
   }
 ]
 
+export const experience = [
+  {
+    company: 'Mastermold LLC',
+    role: 'Mechanical Engineering Intern',
+    period: 'Summer 2025',
+    detail:
+      'Designed and tested a deburring end-of-arm tool that increased finishing productivity, delivering FEA, a bill of materials, engineering drawings, and an assembly guide.',
+  },
+  {
+    company: 'UW-Madison, ME 201',
+    role: 'Student Assistant',
+    period: '2024 — Present',
+    detail:
+      'Support instruction for introductory mechanical engineering coursework, guiding students through problem sets and design fundamentals.',
+  },
+  {
+    company: 'Badgers in Themed Entertainment',
+    role: 'Founder & President',
+    period: '2024 — Present',
+    detail:
+      'Founded and lead a student organization focused on themed entertainment, coordinating a multidisciplinary team through design reviews and hands-on builds.',
+  },
+]
+
+export const certificates = [
+  {
+    name: 'Mathematics Certificate (Optimization Focus)',
+    organization: 'University of Wisconsin-Madison',
+    date: '2025',
+    detail:
+      'Coursework centered on optimization methods and applied mathematics that support engineering analysis and design decisions.',
+  },
+  {
+    name: 'Manufacturing Certificate',
+    organization: 'University of Wisconsin-Madison',
+    date: 'In Progress',
+    detail:
+      'Focused on manufacturing processes, design for manufacturability, and production-ready engineering practices.',
+  },
+  {
+    name: 'Leadership Certificate',
+    organization: 'University of Wisconsin-Madison',
+    date: 'In Progress',
+    detail:
+      'Developing team leadership, project management, and communication skills through coursework and hands-on organization leadership.',
+  },
+]
+
 export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
 ]

@@ -10,8 +10,8 @@ type Sort = 'Newest' | 'Oldest' | 'A–Z'
 
 const filters: Filter[] = ['All', 'Key', 'Personal', 'School', 'Work']
 
-export function ProjectArchive() {
-  const [filter, setFilter] = useState<Filter>('All')
+export function ProjectArchive({ initialFilter = 'All' }: { initialFilter?: Filter }) {
+  const [filter, setFilter] = useState<Filter>(initialFilter)
   const [sort, setSort] = useState<Sort>('Newest')
 
   const visible = useMemo(() => {

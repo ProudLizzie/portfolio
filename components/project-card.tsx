@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import type { Project } from '@/lib/portfolio-data'
 import { cn } from '@/lib/utils'
@@ -11,7 +12,8 @@ export function ProjectCard({
   className?: string
 }) {
   return (
-    <article
+    <Link
+      href={`/projects/${project.slug}`}
       className={cn(
         'group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-md',
         className,
@@ -47,14 +49,11 @@ export function ProjectCard({
             </span>
           ))}
         </div>
-        <button
-          type="button"
-          className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-primary transition-colors hover:text-primary/80"
-        >
+        <span className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-primary transition-colors group-hover:text-primary/80">
           View Project
           <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-        </button>
+        </span>
       </div>
-    </article>
+    </Link>
   )
 }

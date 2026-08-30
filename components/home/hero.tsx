@@ -41,8 +41,8 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-card shadow-md">
             <div className="relative aspect-[3/4]">
               <Image
-                src={profile.portrait || '/placeholder.svg'}
-                alt={`Portrait of ${profile.name}`}
+                src="/images/hero-blueprint.png"
+                alt="Technical blueprint illustration of an exploded mechanical gear assembly"
                 fill
                 priority
                 className="object-cover"
