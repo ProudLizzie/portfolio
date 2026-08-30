@@ -17,7 +17,7 @@ export const stats = [
   { value: '15', label: 'Software Tools' },
 ]
 
-export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Work'
+export type ProjectCategory = 'Key' | 'Personal' | 'School' | 'Work' | 'WIP'
 
 export type ProjectBlock =
   | { type: 'text'; text: string }
@@ -33,6 +33,12 @@ export type Project = {
   image: string
   year: string
   blocks: ProjectBlock[]
+  // WIP-only fields. `startDate` (YYYY-MM) orders the Works in Progress
+  // timeline oldest-first; `status` is the mid-length progress description.
+  // When a project's category changes away from 'WIP', these are ignored and
+  // the project flows into the archive / gallery / Key Projects like any other.
+  startDate?: string
+  status?: string
 }
 
 export const projects: Project[] = [
@@ -421,10 +427,49 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: 'quad-walker',
+    title: 'Quadruped Walking Robot',
+    description: 'A four-legged walking robot exploring stable gait control.',
+    category: 'WIP',
+    tags: ['SolidWorks', 'Arduino Programming', 'Kinematics', '3D Printing'],
+    image: '/images/project-robotic-arm.png',
+    year: '2026',
+    startDate: '2025-09',
+    status:
+      'I am prototyping a four-legged walker to study stable gait generation across uneven surfaces. So far I have modeled the leg linkages in SolidWorks and printed a first set of joints, and I am now writing the inverse-kinematics routine that coordinates the twelve servos. Next up is tuning the walking cycle so the robot can transition smoothly between standing, trotting, and turning.',
+    blocks: [],
+  },
+  {
+    slug: 'weather-station',
+    title: 'Solar Backyard Weather Station',
+    description: 'A solar-powered sensor station logging local microclimate data.',
+    category: 'WIP',
+    tags: ['Embedded C++', 'PCB Design', 'CAD', 'Data Logging'],
+    image: '/images/project-turbine.png',
+    year: '2026',
+    startDate: '2026-01',
+    status:
+      'This build pairs a small solar panel and battery with a microcontroller to log temperature, humidity, and wind data from my backyard. I have the sensor breadboard working and a weatherproof enclosure modeled for printing. The current focus is designing a compact PCB to replace the breadboard and getting the readings to publish to a simple dashboard.',
+    blocks: [],
+  },
 ]
 
 export function getProject(slug: string) {
   return projects.find((p) => p.slug === slug)
+}
+
+// Projects that have their own detail page. WIP entries are status updates,
+// not full case studies, so they are excluded from routing and detail views.
+export function getDetailProjects() {
+  return projects.filter((p) => p.category !== 'WIP')
+}
+
+// Works in Progress, ordered oldest start date first.
+export function getWorksInProgress() {
+  return projects
+    .filter((p) => p.category === 'WIP')
+    .sort((a, b) => (a.startDate ?? '').localeCompare(b.startDate ?? ''))
 }
 
 export const smallerBuildTabs: {

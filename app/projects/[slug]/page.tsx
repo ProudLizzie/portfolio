@@ -5,10 +5,10 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
-import { projects, getProject, type ProjectBlock } from '@/lib/portfolio-data'
+import { getDetailProjects, getProject, type ProjectBlock } from '@/lib/portfolio-data'
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }))
+  return getDetailProjects().map((project) => ({ slug: project.slug }))
 }
 
 export async function generateMetadata({
@@ -87,13 +87,16 @@ export default async function ProjectDetailPage({
   const { slug } = await params
   const project = getProject(slug)
 
-  if (!project) {
+  // WIP projects are status updates without a full write-up, so they have no
+  // detail page. They gain one automatically once their category changes.
+  if (!project || project.category === 'WIP') {
     notFound()
   }
 
-  const index = projects.findIndex((p) => p.slug === project.slug)
-  const prev = index > 0 ? projects[index - 1] : null
-  const next = index < projects.length - 1 ? projects[index + 1] : null
+  const detailProjects = getDetailProjects()
+  const index = detailProjects.findIndex((p) => p.slug === project.slug)
+  const prev = index > 0 ? detailProjects[index - 1] : null
+  const next = index < detailProjects.length - 1 ? detailProjects[index + 1] : null
 
   return (
     <>

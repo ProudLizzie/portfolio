@@ -11,24 +11,26 @@ export function ProjectCard({
   project: Project
   className?: string
 }) {
-  return (
-    <Link
-      href={`/projects/${project.slug}`}
-      className={cn(
-        'group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-md',
-        className,
-      )}
-    >
+  // WIP projects are informational, not actionable: they render as a static
+  // card with no link and no "View Project" affordance until they graduate to
+  // a finished category and get their own detail page.
+  const isWip = project.category === 'WIP'
+
+  const inner = (
+    <>
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={project.image || '/placeholder.svg'}
           alt={project.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={cn(
+            'object-cover',
+            !isWip && 'transition-transform duration-500 group-hover:scale-105',
+          )}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
         <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
-          {project.category}
+          {isWip ? 'In Progress' : project.category}
         </span>
       </div>
       <div className="flex flex-1 flex-col p-6">
@@ -49,11 +51,42 @@ export function ProjectCard({
             </span>
           ))}
         </div>
-        <span className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-primary transition-colors group-hover:text-primary/80">
-          View Project
-          <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-        </span>
+        {isWip ? (
+          <span className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-muted-foreground">
+            Work in progress
+          </span>
+        ) : (
+          <span className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-primary transition-colors group-hover:text-primary/80">
+            View Project
+            <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </span>
+        )}
       </div>
+    </>
+  )
+
+  if (isWip) {
+    return (
+      <div
+        className={cn(
+          'flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm',
+          className,
+        )}
+      >
+        {inner}
+      </div>
+    )
+  }
+
+  return (
+    <Link
+      href={`/projects/${project.slug}`}
+      className={cn(
+        'group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-md',
+        className,
+      )}
+    >
+      {inner}
     </Link>
   )
 }
