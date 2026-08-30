@@ -428,27 +428,27 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'quad-walker',
-    title: 'Quadruped Walking Robot',
-    description: 'A four-legged walking robot exploring stable gait control.',
+    slug: 'parrot',
+    title: 'Animatronic Parrot',
+    description: 'A 5-DOF animatronic bird designed to iterate',
     category: 'WIP',
     tags: ['SolidWorks', 'Arduino Programming', 'Kinematics', '3D Printing'],
     image: '/images/project-robotic-arm.png',
     year: '2026',
-    startDate: '2025-09',
+    startDate: '2026-06',
     status:
       'I am prototyping a four-legged walker to study stable gait generation across uneven surfaces. So far I have modeled the leg linkages in SolidWorks and printed a first set of joints, and I am now writing the inverse-kinematics routine that coordinates the twelve servos. Next up is tuning the walking cycle so the robot can transition smoothly between standing, trotting, and turning.',
     blocks: [],
   },
   {
-    slug: 'weather-station',
-    title: 'Solar Backyard Weather Station',
-    description: 'A solar-powered sensor station logging local microclimate data.',
+    slug: 'kuka',
+    title: 'Kuka Arm',
+    description: 'Table-top sized model attraction',
     category: 'WIP',
     tags: ['Embedded C++', 'PCB Design', 'CAD', 'Data Logging'],
     image: '/images/project-turbine.png',
     year: '2026',
-    startDate: '2026-01',
+    startDate: '2026-08',
     status:
       'This build pairs a small solar panel and battery with a microcontroller to log temperature, humidity, and wind data from my backyard. I have the sensor breadboard working and a weatherproof enclosure modeled for printing. The current focus is designing a compact PCB to replace the breadboard and getting the readings to publish to a simple dashboard.',
     blocks: [],
@@ -479,7 +479,7 @@ export const smallerBuildTabs: {
 }[] = [
   { key: 'Personal', label: 'Personal Projects', blurb: 'Work driven by a curiosity to learn.' },
   { key: 'School', label: 'School Projects', blurb: 'Coursework and club deliverables.' },
-  { key: 'Professional', label: 'Professional Projects', blurb: 'Production work from internships and co-ops.' },
+  { key: 'Professional', label: 'Professional Projects', blurb: 'Production work from internships.' },
 ]
 
 export const skills = [
@@ -520,30 +520,23 @@ export const experience = [
     detail:
       'Founded and lead a student organization focused on themed entertainment, coordinating a multidisciplinary team through design reviews and hands-on builds.',
   },
+  {
+    company: 'Busch Gardens Williamsburg',
+    role: 'Leadership Intern, Supply Chain',
+    period: 'Summer 2026',
+    detail:
+      'Founded and lead a student organization focused on themed entertainment, coordinating a multidisciplinary team through design reviews and hands-on builds.',
+  }
 ]
 
 export const certificates = [
   {
-    name: 'Mathematics Certificate (Optimization Focus)',
-    organization: 'University of Wisconsin-Madison',
+    name: 'Engineering in Training (EIT)',
+    organization: 'California Board for Professional Engineers',
     date: '2025',
     detail:
-      'Coursework centered on optimization methods and applied mathematics that support engineering analysis and design decisions.',
-  },
-  {
-    name: 'Manufacturing Certificate',
-    organization: 'University of Wisconsin-Madison',
-    date: 'In Progress',
-    detail:
-      'Focused on manufacturing processes, design for manufacturability, and production-ready engineering practices.',
-  },
-  {
-    name: 'Leadership Certificate',
-    organization: 'University of Wisconsin-Madison',
-    date: 'In Progress',
-    detail:
-      'Developing team leadership, project management, and communication skills through coursework and hands-on organization leadership.',
-  },
+      'License number #188722',
+  }
 ]
 
 export const navLinks = [
