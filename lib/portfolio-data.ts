@@ -366,7 +366,7 @@ export const projects: Project[] = [
     description: 'Lamp shade and stand designed with memorable photo moments when the light turns on',
     category: 'Personal',
     tags: ['3D Printing', 'Resin Printing', 'Creative'],
-    image: '/images/build-conveyor.png',
+    image: '/lithomodel.jpg',
     year: '2025',
     blocks: [
       {
@@ -374,9 +374,11 @@ export const projects: Project[] = [
         text: 'A resin-printed lithophane lamp that reveals hidden photographs when illuminated.',
       },
       {
-        type: 'image',
-        src: '/images/project-3dprinter.png',
-        caption: 'Resin printing the lithophane shade.',
+        type: 'imagePair',
+        images: [
+          { src: '/lampon.jpg', caption: 'Early arm articulation prototype.' },
+          { src: '/lampoff.jpg', caption: 'Drive mechanism for the arms.' },
+        ],
       },
       {
         type: 'text',
