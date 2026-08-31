@@ -201,26 +201,40 @@ export const projects: Project[] = [
     description: 'Drawing designs to 3D model a flying car',
     category: 'Academic',
     tags: ['Solidworks', 'Hand sketching', 'Engineering Drawings'],
-    image: '/images/build-suspension.png',
+    image: '/231render.jpg',
     year: '2024',
     blocks: [
       {
         type: 'text',
-        text: 'A conceptual design exercise that started from hand sketches and progressed into a full SolidWorks 3D model of a flying car.',
+        text: 'The goal of this project was to learn Solidworks. I worked in a team of 4 to design and model a flying car. The main challenge of this project was to fit different components seamlessly together, even though they were made by different people. Step one was to first hand sketch everything we wanted. My sketches are shown below.',
       },
       {
         type: 'image',
-        src: '/images/build-cad-bracket.png',
-        caption: 'Sketch translated into CAD geometry.',
+        src: '/231sketch.jpg',
+        caption: 'Full car model sketch',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/231sketch2.png', caption: 'Steering Wheel Sketch' },
+          { src: '/231sketch3.png', caption: 'Car Body Sketch' },
+        ],
       },
       {
         type: 'text',
-        text: 'The project emphasized translating freehand ideation into precise engineering drawings, developing my ability to move fluidly between creative concept and dimensioned CAD geometry.',
+        text: 'After this, we had to fully model all of our parts, assemble them, and create a Bill of Materials with an exploded view.'
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/231models.png', caption: 'My 3D models' },
+          { src: '/231render.jpg', caption: 'Full Assembly' },
+        ],
       },
       {
         type: 'image',
-        src: '/images/project-drone.png',
-        caption: 'Rendered concept model.',
+        src: '/231exploded.png',
+        caption: 'Assembly',
       },
     ],
   },
