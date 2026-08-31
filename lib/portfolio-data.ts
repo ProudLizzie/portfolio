@@ -423,13 +423,13 @@ export const projects: Project[] = [
     //       { src: '/images/build-suspension.png', caption: 'Work in progress.' },
     //     ],
     //   },
-      {
-        type: 'text',
-        text: 'Beyond the craft itself, running the shop has taught me about product design, marketing, and fulfillment. It is a creative outlet that keeps my hands busy and my design instincts sharp.',
-      },
-    ],
-  },
-  )
+    //   {
+    //     type: 'text',
+    //     text: 'Beyond the craft itself, running the shop has taught me about product design, marketing, and fulfillment. It is a creative outlet that keeps my hands busy and my design instincts sharp.',
+    //   },
+    // ],
+  // },
+  
   {
     slug: 'parrot',
     title: 'Animatronic Parrot',
