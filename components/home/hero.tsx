@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Download, ArrowDown } from 'lucide-react'
-import { NaturalImage } from '@/components/natural-image'
+import { EditableHeroImage } from '@/components/home/editable-hero-image'
 import { profile } from '@/lib/portfolio-data'
 
 export function Hero() {
@@ -38,14 +38,10 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-sm">
           <div className="pointer-events-none absolute -right-6 -top-6 h-full w-full rounded-t-[999px] rounded-b-3xl bg-rose/40" />
           <div className="pointer-events-none absolute -bottom-6 -left-6 size-28 rounded-full bg-sage/50" />
-          <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-card shadow-md">
-            <NaturalImage
-              src="/images/hero-blueprint.png"
-              alt="Technical blueprint illustration of an exploded mechanical gear assembly"
-              priority
-              sizes="(max-width: 768px) 80vw, 380px"
-            />
-          </div>
+          <EditableHeroImage
+            defaultSrc="/images/hero-blueprint.png"
+            alt="Technical blueprint illustration of an exploded mechanical gear assembly"
+          />
         </div>
       </div>
     </section>
