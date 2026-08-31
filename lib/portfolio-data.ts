@@ -65,19 +65,12 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/images/build-gearbox.png',
+        src: '/images/buckyexpo.jpg',
         caption: 'Engineering Expo with Bucky!',
       },
       {
         type: 'text',
         text: 'Since our first showing, we have made a few design changes, as well. Since our event demonstrations focused on energy conversion, I designed a tall spike for our car to go up. This way kids had a better time understanding that the more energy they put in, the more that will come out and the higher the car will go. I also iterated on the car a bit more, printing the bogeys with resin, and cleaning up the outser shell for a sleek appearance.',
-      },
-      {
-        type: 'imagePair',
-        images:[
-          { src: '/images/project-turbine.png', caption: '' },
-          { src: '/images/build-suspension.png', caption: '' },
-        ],
       },
     ],
   },
@@ -136,7 +129,7 @@ export const projects: Project[] = [
       'An animatronic octopus with flexible arms designed with thorough plastic manufacturing iteration',
     category: 'Key',
     tags: ['Mechanical Design', 'Life Cycle Study', 'Plastics Manufacturing', 'Iterative Development'],
-    image: '/images/project-3dprinter.png',
+    image: '/images/octojelly.jpg',
     year: '2026',
     blocks: [
       {
