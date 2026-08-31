@@ -39,7 +39,7 @@ export function Hero() {
           <div className="pointer-events-none absolute -right-6 -top-6 h-full w-full rounded-t-[999px] rounded-b-3xl bg-rose/40" />
           <div className="pointer-events-none absolute -bottom-6 -left-6 size-28 rounded-full bg-sage/50" />
           <EditableHeroImage
-            defaultSrc="/images/hero-blueprint.png"
+            defaultSrc="/eoatdrawpurple.png"
             alt="Technical blueprint illustration of an exploded mechanical gear assembly"
           />
         </div>
