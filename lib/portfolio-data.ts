@@ -316,7 +316,7 @@ export const projects: Project[] = [
     description: '3D, lasercut ornament of my favorite college football stadium',
     category: 'Personal',
     tags: ['Laser Cutting', 'Adobe Illustrator'],
-    image: '/images/build-conveyor.png',
+    image: '/images/ornament.jpg',
     year: '2023',
     blocks: [
       {
@@ -325,7 +325,7 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/images/build-cad-bracket.png',
+        src: '/ornamentill.png',
         caption: 'Stacked laser-cut layers.',
       },
       {
