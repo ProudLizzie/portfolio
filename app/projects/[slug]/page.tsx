@@ -55,6 +55,68 @@ function ContentBlock({ block, title }: { block: ProjectBlock; title: string }) 
     )
   }
 
+  if (block.type === 'imageText') {
+    const imageOnRight = block.imageSide === 'right'
+    return (
+      <div className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
+        <figure className={imageOnRight ? 'md:order-2' : ''}>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-sm">
+            <Image
+              src={block.src || '/placeholder.svg'}
+              alt={block.caption ? block.caption : title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 360px"
+            />
+          </div>
+          {block.caption && (
+            <figcaption className="mt-3 text-sm text-muted-foreground">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+        <p className={`text-pretty text-lg leading-relaxed text-muted-foreground ${imageOnRight ? 'md:order-1' : ''}`}>
+          {block.text}
+        </p>
+      </div>
+    )
+  }
+
+  if (block.type === 'pdf') {
+    return (
+      <figure>
+        <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+          <object
+            data={block.src}
+            type="application/pdf"
+            className="h-[600px] w-full"
+            aria-label={block.title ? block.title : `${title} — embedded PDF`}
+          >
+            <div className="flex flex-col items-center gap-3 p-8 text-center">
+              <p className="text-sm text-muted-foreground">
+                Your browser can&apos;t display this PDF inline.
+              </p>
+              <a
+                href={block.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Open PDF
+                <ArrowRight className="size-4" />
+              </a>
+            </div>
+          </object>
+        </div>
+        {block.title && (
+          <figcaption className="mt-3 text-sm text-muted-foreground">
+            {block.title}
+          </figcaption>
+        )}
+      </figure>
+    )
+  }
+
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {block.images.map((img, i) => (

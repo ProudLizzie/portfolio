@@ -23,6 +23,11 @@ export type ProjectBlock =
   | { type: 'text'; text: string }
   | { type: 'image'; src: string; caption?: string }
   | { type: 'imagePair'; images: { src: string; caption?: string }[] }
+  // Side-by-side image and text. `imageSide` controls which side the image sits
+  // on (defaults to 'left'). Stacks vertically on small screens.
+  | { type: 'imageText'; src: string; text: string; caption?: string; imageSide?: 'left' | 'right' }
+  // Embedded PDF viewer. `src` is a path to a PDF (e.g. '/docs/report.pdf').
+  | { type: 'pdf'; src: string; title?: string }
 
 export type Project = {
   slug: string
@@ -150,6 +155,13 @@ export const projects: Project[] = [
       {
         type: 'text',
         text: 'With the hinge mechanism solved, I turned to aesthetics and making the assembly actually look like a tentacle. Designed in Onshape, the shape came together relatively quickly. A bracket and pulley were added at the end to guide the string running through the length of the tentacle. By wrapping the string in opposite directions, the tentacle achieves a beautifully organic, sweeping motion, all driven by a single motor. This paired pretty well with one of my team members octopus body, and overall gave a great effect for our final scene, which will be refined even more next year!',
+      },
+      {
+        type: 'imageText',
+        src: '/images/build-conveyor.png',
+        imageSide: 'right',
+        caption: 'Final tentacle assembly.',
+        text: 'The final tentacle reads as a single fluid limb even though it is a chain of rigid printed segments joined by living hinges. Placing the image beside the write-up keeps the mechanical detail and the explanation in view at the same time.',
       },
     ],
   },
