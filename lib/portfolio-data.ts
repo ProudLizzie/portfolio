@@ -169,21 +169,21 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: 'logos',
-    title: 'Logos and Designs',
-    description: 'Branding a start up club with iconic logos and designs.',
-    category: 'Academic',
-    tags: ['Adobe Illustrator', 'Creative', 'Marketing'],
-    image: '/images/build-cad-bracket.png',
-    year: '2024',
-    blocks: [
-      {
-        type: 'text',
-        text: 'Starting a club means coming up with a Brand Identity. The main idea was to keep our logos and designs fun and playful, while representing themed entertainment. Here are a few of the fun designs I made over the past couple of years!',
-      },
-    ],
-  },
+  // {
+  //   slug: 'logos',
+  //   title: 'Logos and Designs',
+  //   description: 'Branding a start up club with iconic logos and designs.',
+  //   category: 'Academic',
+  //   tags: ['Adobe Illustrator', 'Creative', 'Marketing'],
+  //   image: '/images/build-cad-bracket.png',
+  //   year: '2024',
+  //   blocks: [
+  //     {
+  //       type: 'text',
+  //       text: 'Starting a club means coming up with a Brand Identity. The main idea was to keep our logos and designs fun and playful, while representing themed entertainment. Here are a few of the fun designs I made over the past couple of years!',
+  //     },
+  //   ],
+  // },
   {
     slug: 'crane',
     title: 'Crane Project',
