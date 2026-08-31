@@ -340,7 +340,7 @@ export const projects: Project[] = [
     description: 'Laser cut, collapsible gingerbread houses, perfect for Holiday decorations!',
     category: 'Personal',
     tags: ['Onshape', 'Laser Cutting', 'Creative'],
-    image: '/images/build-conveyor.png',
+    image: '/gingymodel.jpg',
     year: '2024',
     blocks: [
       {
@@ -350,8 +350,8 @@ export const projects: Project[] = [
       {
         type: 'imagePair',
         images: [
-          { src: '/images/build-gearbox.png', caption: 'Interlocking panel layout.' },
-          { src: '/images/build-heatsink.png', caption: 'Assembled house.' },
+          { src: '/gingycut.jpg', caption: 'Interlocking panel layout.' },
+          { src: '/gingydeco.jpg', caption: 'Assembled house.' },
         ],
       },
       {
