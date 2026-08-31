@@ -260,7 +260,7 @@ export const projects: Project[] = [
     description: 'Deburring EOAT to be used at Mastermold LLC to increase productivity of finishing products',
     category: 'Professional',
     tags: ['Solidworks', 'FEA', 'Testing', 'Manufacturing', 'Bill of Materials', 'Engineering Drawing', 'Assembly Guide'],
-    image: '/images/build-heatsink.png',
+    image: '/eoatmodel.png',
     year: '2025',
     blocks: [
       {
@@ -269,7 +269,7 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/images/build-pump.png',
+        src: '/eoatdraw.png',
         caption: 'EOAT mounted for testing.',
       },
       {
@@ -277,22 +277,17 @@ export const projects: Project[] = [
         text: 'The work covered the full engineering package: SolidWorks modeling, FEA to validate loading, and physical testing on the floor.',
       },
       {
-        type: 'imagePair',
-        images: [
-          { src: '/images/build-gearbox.png', caption: 'FEA loading study.' },
-          { src: '/images/build-cad-bracket.png', caption: 'Mounting bracket detail.' },
-        ],
+        type: 'imageText',
+        src: '/eoatchuck.png',
+        text: 'A chuck was also designed for the EOAT to be manufactured.',
+        caption?: 'EOAT Chuck',
+        imageSide?: 'left',
       },
       {
         type: 'text',
         text: 'I delivered a bill of materials, engineering drawings, and an assembly guide so the tool could be reproduced and maintained.',
       },
-      {
-        type: 'pdf',
-        src: '/resume.pdf',
-        title: 'EOAT Engineering Package',
-        caption: 'Full documentation set: calculations, drawings, and assembly guide.',
-      },
+  
     ],
   },
   {
