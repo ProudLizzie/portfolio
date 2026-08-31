@@ -94,7 +94,7 @@ export const projects: Project[] = [
       'An interactive dark ride with painted scenery, modeled props, and small immersive animatronics.',
     category: 'Academic',
     tags: ['Design', 'Modeling', 'Creative'],
-    image: '/images/boxdrawing.png',
+    image: '/ridebox.png',
     year: '2026',
     blocks: [
       {
@@ -142,7 +142,7 @@ export const projects: Project[] = [
       'An animatronic octopus with flexible arms designed with thorough plastic manufacturing iteration',
     category: 'Key',
     tags: ['Mechanical Design', 'Life Cycle Study', 'Plastics Manufacturing', 'Iterative Development'],
-    image: '/images/octojelly.jpg',
+    image: '/octojelly.png',
     year: '2026',
     blocks: [
       {
