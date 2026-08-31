@@ -280,8 +280,8 @@ export const projects: Project[] = [
         type: 'imageText',
         src: '/eoatchuck.png',
         text: 'A chuck was also designed for the EOAT to be manufactured.',
-        caption?: 'EOAT Chuck',
-        imageSide?: 'left',
+        caption: 'EOAT Chuck',
+        imageSide: 'left',
       },
       {
         type: 'text',
