@@ -48,7 +48,7 @@ export const projects: Project[] = [
     description: 'A table-top sized pneumatic launching coaster',
     category: 'Academic',
     tags: ['SolidWorks', 'Pneumatic Controls', '3D Printing'],
-    image: '/images/project-robotic-arm.png',
+    image: '/images/blastoff.jpg',
     year: '2025',
     blocks: [
       {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       'An interactive dark ride with painted scenery, modeled props, and small immersive animatronics.',
     category: 'Academic',
     tags: ['Design', 'Modeling', 'Creative'],
-    image: '/images/project-drone.png',
+    image: '/images/boxdrawing.png',
     year: '2026',
     blocks: [
       {
@@ -102,7 +102,7 @@ export const projects: Project[] = [
       {
         type: 'imagePair',
         images: [
-          { src: '/images/project-turbine.png', caption: 'Moving Coral' },
+          { src: '/images/boxouter.JPG', caption: 'Scenery' },
           { src: '/images/build-suspension.png', caption: 'Scenery.' },
         ],
       },
