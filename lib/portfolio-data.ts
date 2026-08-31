@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: 'A table-top sized pneumatic launching coaster',
     category: 'Academic',
     tags: ['SolidWorks', 'Pneumatic Controls', '3D Printing'],
-    image: '/images/blastoff.jpg',
+    image: '/blastoff.png',
     year: '2025',
     blocks: [
       {
