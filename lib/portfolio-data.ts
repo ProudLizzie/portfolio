@@ -191,7 +191,7 @@ export const projects: Project[] = [
       'A table top crane capable of lifting 3.5 kilograms using a block and tackle and counterweight system',
     category: 'Academic',
     tags: ['Gear Design', 'CAD'],
-    image: '/images/build-gearbox.png',
+    image: '/cranedraw.jpg',
     year: '2023',
     blocks: [
       {
@@ -201,13 +201,20 @@ export const projects: Project[] = [
       {
         type: 'imagePair',
         images: [
-          { src: '/images/build-heatsink.png', caption: 'Original Design.' },
-          { src: '/images/build-suspension.png', caption: 'Final Build' },
+          { src: '/cranedraw.jpg', caption: 'Original Design.' },
+          { src: '/cranefin.jpg', caption: 'Final Build' },
         ],
       },
       {
         type: 'text',
         text: 'The project focused on gear design and mechanical advantage, with full CAD modeling to validate the geometry before building. Testing confirmed the crane could lift its target load smoothly without tipping.',
+      },
+      {
+        type: 'imagePair',
+        images: [
+          { src: '/cranegear.jpg', caption: 'gear ratio plot' },
+          { src: '/cranegraph.jpg', caption: 'gear box' },
+        ],
       },
     ],
   },
