@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, FileText } from 'lucide-react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
+import { NaturalImage } from '@/components/natural-image'
 import { getDetailProjects, getProject, type ProjectBlock } from '@/lib/portfolio-data'
 
 export function generateStaticParams() {
@@ -37,12 +37,10 @@ function ContentBlock({ block, title }: { block: ProjectBlock; title: string }) 
   if (block.type === 'image') {
     return (
       <figure>
-        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border shadow-sm">
-          <Image
-            src={block.src || '/placeholder.svg'}
+        <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+          <NaturalImage
+            src={block.src}
             alt={block.caption ? block.caption : title}
-            fill
-            className="object-cover"
             sizes="(max-width: 768px) 100vw, 720px"
           />
         </div>
@@ -55,16 +53,93 @@ function ContentBlock({ block, title }: { block: ProjectBlock; title: string }) 
     )
   }
 
+  if (block.type === 'imageText') {
+    const figure = (
+      <figure className="min-w-0">
+        <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+          <NaturalImage
+            src={block.src}
+            alt={block.caption ? block.caption : title}
+            sizes="(max-width: 768px) 100vw, 360px"
+          />
+        </div>
+        {block.caption && (
+          <figcaption className="mt-3 text-sm text-muted-foreground">
+            {block.caption}
+          </figcaption>
+        )}
+      </figure>
+    )
+    const text = (
+      <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
+        {block.text}
+      </p>
+    )
+    return (
+      <div className="grid items-center gap-6 sm:gap-8 md:grid-cols-2">
+        {block.imageSide === 'right' ? (
+          <>
+            {text}
+            {figure}
+          </>
+        ) : (
+          <>
+            {figure}
+            {text}
+          </>
+        )}
+      </div>
+    )
+  }
+
+  if (block.type === 'pdf') {
+    return (
+      <figure>
+        <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+          <object
+            data={block.src}
+            type="application/pdf"
+            aria-label={block.title ?? `${title} document`}
+            className="h-[70vh] min-h-[420px] w-full bg-muted"
+          >
+            <div className="flex flex-col items-start gap-3 p-6">
+              <p className="text-sm text-muted-foreground">
+                Your browser can&apos;t display this PDF inline.
+              </p>
+              <a
+                href={block.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80"
+              >
+                <FileText className="size-4" />
+                Open the PDF
+              </a>
+            </div>
+          </object>
+        </div>
+        {(block.title || block.caption) && (
+          <figcaption className="mt-3 flex items-center gap-1.5 text-sm text-muted-foreground">
+            <FileText className="size-4 shrink-0 text-primary" />
+            <span>
+              {block.title && <span className="font-medium text-foreground">{block.title}</span>}
+              {block.title && block.caption && ' — '}
+              {block.caption}
+            </span>
+          </figcaption>
+        )}
+      </figure>
+    )
+  }
+
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {block.images.map((img, i) => (
         <figure key={img.src + i}>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-sm">
-            <Image
-              src={img.src || '/placeholder.svg'}
+          <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+            <NaturalImage
+              src={img.src}
               alt={img.caption ? img.caption : `${title} — photo ${i + 1}`}
-              fill
-              className="object-cover"
               sizes="(max-width: 768px) 100vw, 360px"
             />
           </div>
@@ -124,13 +199,11 @@ export default async function ProjectDetailPage({
         </div>
 
         <div className="mx-auto mt-10 max-w-5xl px-6">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-border shadow-sm">
-            <Image
-              src={project.image || '/placeholder.svg'}
+          <div className="overflow-hidden rounded-3xl border border-border shadow-sm">
+            <NaturalImage
+              src={project.image}
               alt={project.title}
-              fill
               priority
-              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 960px"
             />
           </div>

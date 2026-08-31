@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import { NaturalImage } from '@/components/natural-image'
 import { projects } from '@/lib/portfolio-data'
 
 export function FeaturedProjects() {
@@ -35,19 +35,16 @@ export function FeaturedProjects() {
             >
               <Link
                 href={`/projects/${project.slug}`}
-                className={`relative block overflow-hidden rounded-3xl border border-border shadow-sm ${
+                className={`block overflow-hidden rounded-3xl border border-border shadow-sm ${
                   i % 2 === 1 ? 'md:order-2' : ''
                 }`}
               >
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={project.image || '/placeholder.svg'}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                <NaturalImage
+                  src={project.image}
+                  alt={project.title}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="transition-transform duration-500 group-hover:scale-105"
+                />
               </Link>
 
               <div className={i % 2 === 1 ? 'md:order-1' : ''}>

@@ -1,12 +1,11 @@
-import Image from 'next/image'
+import { NaturalImage } from '@/components/natural-image'
 import { getWorksInProgress } from '@/lib/portfolio-data'
 
 function formatStart(startDate?: string) {
   if (!startDate) return 'In progress'
-  const [year, month] = startDate.split('-')
-  const date = new Date(Number(year), Number(month) - 1, 1)
-  const label = date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-  return `Started ${label}`
+  // Show the year only — no month marker.
+  const [year] = startDate.split('-')
+  return `Started ${year}`
 }
 
 export function WorksInProgress() {
@@ -37,14 +36,8 @@ export function WorksInProgress() {
               className="grid gap-4 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
             >
               <div className="flex items-center gap-4">
-                <div className="relative size-16 shrink-0 overflow-hidden rounded-xl border border-border">
-                  <Image
-                    src={item.image || '/placeholder.svg'}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                    sizes="64px"
-                  />
+                <div className="w-16 shrink-0 overflow-hidden rounded-xl border border-border">
+                  <NaturalImage src={item.image} alt={item.title} sizes="64px" />
                 </div>
                 <p className="text-sm text-muted-foreground">{formatStart(item.startDate)}</p>
               </div>
