@@ -402,33 +402,34 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: 'crochet',
-    title: 'Crochet Projects',
-    description:
-      'A selection of my favorite crochet projects, some of which are on my Etsy shop, with sales in over 14 countries.',
-    category: 'Personal',
-    tags: ['Creative', 'Marketing'],
-    image: '/images/build-conveyor.png',
-    year: '2020 - Present',
-    blocks: [
-      {
-        type: 'text',
-        text: 'An ongoing collection of my favorite crochet projects, many of which I sell through my Etsy shop with sales in over 14 countries.',
-      },
-      {
-        type: 'imagePair',
-        images: [
-          { src: '/images/build-cad-bracket.png', caption: 'A few finished pieces.' },
-          { src: '/images/build-suspension.png', caption: 'Work in progress.' },
-        ],
-      },
+  // {
+    // slug: 'crochet',
+    // title: 'Crochet Projects',
+    // description:
+    //   'A selection of my favorite crochet projects, some of which are on my Etsy shop, with sales in over 14 countries.',
+    // category: 'Personal',
+    // tags: ['Creative', 'Marketing'],
+    // image: '/images/build-conveyor.png',
+    // year: '2020 - Present',
+    // blocks: [
+    //   {
+    //     type: 'text',
+    //     text: 'An ongoing collection of my favorite crochet projects, many of which I sell through my Etsy shop with sales in over 14 countries.',
+    //   },
+    //   {
+    //     type: 'imagePair',
+    //     images: [
+    //       { src: '/images/build-cad-bracket.png', caption: 'A few finished pieces.' },
+    //       { src: '/images/build-suspension.png', caption: 'Work in progress.' },
+    //     ],
+    //   },
       {
         type: 'text',
         text: 'Beyond the craft itself, running the shop has taught me about product design, marketing, and fulfillment. It is a creative outlet that keeps my hands busy and my design instincts sharp.',
       },
     ],
   },
+  )
   {
     slug: 'parrot',
     title: 'Animatronic Parrot',
