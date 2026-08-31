@@ -23,6 +23,19 @@ export type ProjectBlock =
   | { type: 'text'; text: string }
   | { type: 'image'; src: string; caption?: string }
   | { type: 'imagePair'; images: { src: string; caption?: string }[] }
+  // Side-by-side image + paragraph. `imageSide` places the image left
+  // (default) or right of the text, useful for explaining a single decision
+  // or build step alongside a supporting photo.
+  | {
+      type: 'imageText'
+      src: string
+      text: string
+      caption?: string
+      imageSide?: 'left' | 'right'
+    }
+  // An inline, embedded PDF viewer (calculations, drawings, reports) shown
+  // directly on the page. `src` points at a PDF in /public.
+  | { type: 'pdf'; src: string; title?: string; caption?: string }
 
 export type Project = {
   slug: string
@@ -144,8 +157,11 @@ export const projects: Project[] = [
         ],
       },
       {
-        type: 'text',
-        text: 'My base idea was to design thin, flexible joints between 3D-printed segments, allowing the model to bend at specific intersections and greatly simplifying the overall figure. From a test model, I ran extensive calculations and re-prints to achieve the desired range of motion while maintaining structural rigidity. The thin joints proved difficult to print, and even successful prints were incredibly brittle. After many iterations, I finally arrived at a working solution: double walled joints printed at a slightly reduced layer height. Two factors proved critical to preserving a reliable living hinge: ensuring each layer started and ended within the body of the part rather than at the hinge location, and activating the hinge while the plastic was still warm. The moment a part finished printing, I removed it from the bed and carefully flexed each joint in both directions. Once fully cooled, the hinges remained flexible and the result looked fantastic.',
+        type: 'imageText',
+        src: '/images/project-3dprinter.png',
+        imageSide: 'left',
+        caption: 'Printing the living-hinge joints at a reduced layer height.',
+        text: 'My base idea was to design thin, flexible joints between 3D-printed segments, allowing the model to bend at specific intersections and greatly simplifying the overall figure. From a test model, I ran extensive calculations and re-prints to achieve the desired range of motion while maintaining structural rigidity. The thin joints proved difficult to print, and even successful prints were incredibly brittle. After many iterations, I finally arrived at a working solution: double walled joints printed at a slightly reduced layer height. Two factors proved critical to preserving a reliable living hinge: ensuring each layer started and ended within the body of the part rather than at the hinge location, and activating the hinge while the plastic was still warm.',
       },
       {
         type: 'text',
@@ -270,6 +286,12 @@ export const projects: Project[] = [
       {
         type: 'text',
         text: 'I delivered a bill of materials, engineering drawings, and an assembly guide so the tool could be reproduced and maintained.',
+      },
+      {
+        type: 'pdf',
+        src: '/resume.pdf',
+        title: 'EOAT Engineering Package',
+        caption: 'Full documentation set: calculations, drawings, and assembly guide.',
       },
     ],
   },

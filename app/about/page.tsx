@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Download } from 'lucide-react'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
+import { NaturalImage } from '@/components/natural-image'
 import { PageHeader } from '@/components/page-header'
 import { profile, stats, skills, education, experience, certificates } from '@/lib/portfolio-data'
 
@@ -28,15 +28,11 @@ export default function AboutPage() {
             <div className="relative mx-auto w-full max-w-sm">
               <div className="pointer-events-none absolute -left-5 -top-5 h-full w-full rounded-3xl bg-sage/40" />
               <div className="relative overflow-hidden rounded-3xl border border-border shadow-md">
-                <div className="relative aspect-[3/4]">
-                  <Image
-                    src={profile.portrait || '/placeholder.svg'}
-                    alt={`Portrait of ${profile.name}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 80vw, 380px"
-                  />
-                </div>
+                <NaturalImage
+                  src={profile.portrait}
+                  alt={`Portrait of ${profile.name}`}
+                  sizes="(max-width: 768px) 80vw, 380px"
+                />
               </div>
             </div>
 

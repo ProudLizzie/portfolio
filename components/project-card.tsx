@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import { NaturalImage } from '@/components/natural-image'
 import type { Project } from '@/lib/portfolio-data'
 import { cn } from '@/lib/utils'
 
@@ -18,16 +18,14 @@ export function ProjectCard({
 
   const inner = (
     <>
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <Image
-          src={project.image || '/placeholder.svg'}
+      <div className="relative overflow-hidden">
+        <NaturalImage
+          src={project.image}
           alt={project.title}
-          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
           className={cn(
-            'object-cover',
             !isWip && 'transition-transform duration-500 group-hover:scale-105',
           )}
-          sizes="(max-width: 768px) 100vw, 33vw"
         />
         <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
           {isWip ? 'In Progress' : project.category}

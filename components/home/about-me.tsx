@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import { NaturalImage } from '@/components/natural-image'
 import { profile } from '@/lib/portfolio-data'
 
 export function AboutMe() {
@@ -11,15 +11,11 @@ export function AboutMe() {
           <div className="relative mx-auto w-full max-w-[260px]">
             <div className="pointer-events-none absolute -left-4 -top-4 h-full w-full rounded-3xl bg-sage/40" />
             <div className="relative overflow-hidden rounded-3xl border border-primary-foreground/20 bg-card shadow-md">
-              <div className="relative aspect-[3/4]">
-                <Image
-                  src={profile.portrait || '/placeholder.svg'}
-                  alt={`Portrait of ${profile.name}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 60vw, 260px"
-                />
-              </div>
+              <NaturalImage
+                src={profile.portrait}
+                alt={`Portrait of ${profile.name}`}
+                sizes="(max-width: 768px) 60vw, 260px"
+              />
             </div>
           </div>
 
