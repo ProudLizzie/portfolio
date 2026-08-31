@@ -301,7 +301,7 @@ export const projects: Project[] = [
     description: 'Engineering mockups for production models of railings on a competition sail boat.',
     category: 'Professional',
     tags: ['Engineering Drawings'],
-    image: '/images/build-conveyor.png',
+    image: '/dwrsket.png',
     year: '2023',
     blocks: [
       {
@@ -310,7 +310,7 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/images/build-suspension.png',
+        src: '/dwrsket1.png',
         caption: 'Railing component drawing.',
       },
     ],
