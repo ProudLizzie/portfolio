@@ -70,7 +70,7 @@ export const projects: Project[] = [
       },
       {
         type: 'text',
-        text: 'As this was our very first year, most of my time was dedicated to helping our members. Organizing meeting times, scheduling production deadlines, and training our youngest members in different engineering principles was no easy task. In the end, I am so incredibly proud of the project we were able to put forward.',
+        text: 'As this was our very first year as a club, most of my time was dedicated to helping our members. Organizing meeting times, scheduling production deadlines, and training our youngest members in different engineering principles was no easy task. In the end, I am so incredibly proud of the project we were able to put forward.',
       },
       {
         type: 'text',
