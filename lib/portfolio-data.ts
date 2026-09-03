@@ -419,7 +419,7 @@ export const projects: Project[] = [
     year: '2026',
     startDate: '2026-06',
     status:
-      'I am working on my first full scale audio-animatronic. I've fully ',
+      'I am working on my first full scale audio-animatronic. I have fully modeled out my bird, and am in the works of manufacturing. This design is heavily focused on designing for iteration, meaning it can be easily modified, making it easy for me to improve or troubleshoot.',
     blocks: [],
   },
   {
@@ -432,7 +432,7 @@ export const projects: Project[] = [
     year: '2026',
     startDate: '2026-08',
     status:
-      'This build pairs a small solar panel and battery with a microcontroller to log temperature, humidity, and wind data from my backyard. I have the sensor breadboard working and a weatherproof enclosure modeled for printing. The current focus is designing a compact PCB to replace the breadboard and getting the readings to publish to a simple dashboard.',
+      'This project has a very large focus on ride design. Trying to adhere to ASTM standards, I am desining a ride seat and restraint for the end of the arm, as well as designing a cycloidal drive motor, all from scratch',
     blocks: [],
   },
 ]
