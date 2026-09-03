@@ -106,11 +106,9 @@ export const projects: Project[] = [
         text: 'As our team split up to work on different components, I was able to add some decorative elements to the boxes. painting the walls and ground to feel more immersive, as well as sculpting some elements from clay, this scenery will really help pull everything together. I also designed a coral structure and assembled it using a foam board, covered in paper mache and clay to give a coral texture. Moving corals were created using a spherical gear system and twisted spirals, meticulously arranged to give a flowing illusion. In the darker areas of the undersea adventure, I designed an array of fish to be laser cut out, and with the help of LEDs, give a beautiful show of sea creatures. ',
       },
       {
-        type: 'imagePair',
-        images: [
-          { src: '/images/boxouter.JPG', caption: 'Scenery' },
-          { src: '/images/build-suspension.png', caption: 'Scenery.' },
-        ],
+        type: 'image',
+          src: '/images/boxouter.JPG',
+          caption: 'Overall Box',
       },
     ],
   },
@@ -126,7 +124,7 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'Hopeing to be relatively small, I designed an umbrella-liek mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
+        text: 'Hopeing to be relatively small, I designed an umbrella-like mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
       },
       {
         type: 'image',
@@ -147,20 +145,10 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'text',
-        text: 'I had the opportunity to work on our showstopper animatronic: the octopus. Positioned in our final scene, this centerpiece is designed to serve as a striking focal point amid a sea of celebrating fish. My mission was to create a figure with fluid, lifelike movement using limited resources and parts, presenting quite a few engineering challenges.',
+        text: 'I had the opportunity to work on our showstopper animatronic for a model dark ride: the octopus. Positioned in our final scene, this centerpiece is designed to serve as a striking focal point amid a sea of celebrating fish. My mission was to create a figure with fluid, lifelike movement using limited resources and parts, presenting quite a few engineering challenges.',
       },
       {
-        type: 'imagePair',
-        images: [
-          { src: '/images/project-robotic-arm.png', caption: 'Early arm articulation prototype.' },
-          { src: '/images/build-gearbox.png', caption: 'Drive mechanism for the arms.' },
-        ],
-      },
-      {
-        type: 'imageText',
-        src: '/images/project-3dprinter.png',
-        imageSide: 'left',
-        caption: 'Printing the living-hinge joints at a reduced layer height.',
+        type: 'text',
         text: 'My base idea was to design thin, flexible joints between 3D-printed segments, allowing the model to bend at specific intersections and greatly simplifying the overall figure. From a test model, I ran extensive calculations and re-prints to achieve the desired range of motion while maintaining structural rigidity. The thin joints proved difficult to print, and even successful prints were incredibly brittle. After many iterations, I finally arrived at a working solution: double walled joints printed at a slightly reduced layer height. Two factors proved critical to preserving a reliable living hinge: ensuring each layer started and ended within the body of the part rather than at the hinge location, and activating the hinge while the plastic was still warm.',
       },
       {
@@ -391,15 +379,6 @@ export const projects: Project[] = [
         type: 'text',
         text: 'I designed both the lampshade and stand, tuning the lithophane thickness so cherished photo moments appear only when the light turns on.',
       },
-      {
-        type: 'image',
-        src: '/images/build-pump.png',
-        caption: 'Assembled lamp base.',
-      },
-      {
-        type: 'text',
-        text: 'The project explored the optical properties of resin prints alongside a functional, sculptural form.',
-      },
     ],
   },
   // {
@@ -440,7 +419,7 @@ export const projects: Project[] = [
     year: '2026',
     startDate: '2026-06',
     status:
-      'I am prototyping a four-legged walker to study stable gait generation across uneven surfaces. So far I have modeled the leg linkages in SolidWorks and printed a first set of joints, and I am now writing the inverse-kinematics routine that coordinates the twelve servos. Next up is tuning the walking cycle so the robot can transition smoothly between standing, trotting, and turning.',
+      'I am working on my first full scale audio-animatronic. I've fully ',
     blocks: [],
   },
   {
