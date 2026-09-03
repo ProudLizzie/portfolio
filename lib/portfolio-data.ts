@@ -482,34 +482,34 @@ export const education = [
 
 export const experience = [
   {
-    company: 'Mastermold LLC',
-    role: 'Mechanical Engineering Intern',
-    period: 'Summer 2025',
-    detail:
-      'Designed and tested a deburring end-of-arm tool that increased finishing productivity, delivering FEA, a bill of materials, engineering drawings, and an assembly guide.',
+  company: 'UW-Madison, ME 201',
+  role: 'Student Assistant',
+  period: '2024 — Present',
+  detail:
+  'Support instruction for introductory mechanical engineering coursework, guiding students through problem sets and design fundamentals.',
   },
   {
-    company: 'UW-Madison, ME 201',
-    role: 'Student Assistant',
-    period: '2024 — Present',
-    detail:
-      'Support instruction for introductory mechanical engineering coursework, guiding students through problem sets and design fundamentals.',
+  company: 'Badgers in Themed Entertainment',
+  role: 'Founder & President',
+  period: '2024 — Present',
+  detail:
+  'Founded and lead a student organization focused on themed entertainment, coordinating a multidisciplinary team through design reviews and hands-on builds.',
   },
   {
-    company: 'Badgers in Themed Entertainment',
-    role: 'Founder & President',
-    period: '2024 — Present',
-    detail:
-      'Founded and lead a student organization focused on themed entertainment, coordinating a multidisciplinary team through design reviews and hands-on builds.',
+  company: 'Busch Gardens Williamsburg',
+  role: 'Leadership Intern, Supply Chain',
+  period: 'Summer 2026',
+  detail:
+  'Developed an end of Summer development project, working alongside the engineering team, culinary executives, and operations management.',
   },
   {
-    company: 'Busch Gardens Williamsburg',
-    role: 'Leadership Intern, Supply Chain',
-    period: 'Summer 2026',
-    detail:
-      'Developed an end of Summer development project, working alongside the engineering team, culinary executives, and operations management.',
+  company: 'Mastermold LLC',
+  role: 'Mechanical Engineering Intern',
+  period: 'Summer 2025',
+  detail:
+  'Designed and tested a deburring end-of-arm tool that increased finishing productivity, delivering FEA, a bill of materials, engineering drawings, and an assembly guide.',
   }
-]
+  ]
 
 export const certificates = [
   {

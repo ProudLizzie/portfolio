@@ -30,10 +30,10 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <DownloadPortfolioButton />
-            <SocialLink href={profile.linkedin} icon={<LinkedinIcon className="size-4" />} label="LinkedIn" />
             <SocialLink href={profile.resumeUrl} icon={<Download className="size-4" />} label="Resume (PDF)" />
+            <SocialLink href={profile.linkedin} icon={<LinkedinIcon className="size-4" />} label="LinkedIn" />
             <SocialLink href={`mailto:${profile.email}`} icon={<Mail className="size-4" />} label="Email" />
+            <DownloadPortfolioButton />
           </div>
         </div>
 

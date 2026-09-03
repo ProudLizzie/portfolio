@@ -62,9 +62,13 @@ export function ProjectArchive({ initialFilter = 'All' }: { initialFilter?: Filt
         Showing {visible.length} {visible.length === 1 ? 'project' : 'projects'}
       </p>
 
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 columns-1 gap-6 sm:columns-2 lg:columns-3">
         {visible.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            className="mb-6 break-inside-avoid"
+          />
         ))}
       </div>
     </div>
