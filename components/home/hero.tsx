@@ -12,7 +12,7 @@ export function Hero() {
             {profile.role}
           </p>
           <h1 className="mt-5 text-balance font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-            Hi, I&apos;m {profile.name.split(' ')[0]}.
+            {profile.name}
           </h1>
           <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
             {profile.intro}

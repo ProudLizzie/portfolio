@@ -24,7 +24,7 @@ export function AboutMe() {
               About Me
             </p>
             <h2 className="mt-3 text-balance font-serif text-3xl font-semibold text-primary-foreground md:text-4xl">
-              Hi, I&apos;m {profile.name}.
+              Hi, I&apos;m {profile.name.split(' ')[0]}.
             </h2>
             <p className="mt-5 max-w-lg text-pretty leading-relaxed text-primary-foreground/80">
               I&apos;m a senior mechanical engineering student at UW-Madison who loves
