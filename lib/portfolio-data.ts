@@ -137,7 +137,7 @@ export const projects: Project[] = [
     slug: 'octo',
     title: '5 DOF Animatronic Octopus',
     description:
-      'An animatronic octopus with flexible arms designed with thorough plastic manufacturing iteration',
+      'An animatronic octopus with flexible arms designed with thorough plastic manufacturing iteration.',
     category: 'Key',
     tags: ['Mechanical Design', 'Life Cycle Study', 'Plastics Manufacturing', 'Iterative Development'],
     image: '/octojelly.png',
@@ -209,7 +209,7 @@ export const projects: Project[] = [
   {
     slug: 'flying-car',
     title: 'Flying Car Project',
-    description: 'Drawing designs to 3D model a flying car',
+    description: 'Drawing designs to 3D model a flying car.',
     category: 'Academic',
     tags: ['Solidworks', 'Hand sketching', 'Engineering Drawings'],
     image: '/231render.jpg',
@@ -252,7 +252,7 @@ export const projects: Project[] = [
   {
     slug: 'eoat',
     title: 'End of Arm Tool',
-    description: 'Deburring EOAT to be used at Mastermold LLC to increase productivity of finishing products',
+    description: 'Deburring EOAT to be used at Mastermold LLC to increase productivity of finishing products.',
     category: 'Professional',
     tags: ['Solidworks', 'FEA', 'Testing', 'Manufacturing', 'Bill of Materials', 'Engineering Drawing', 'Assembly Guide'],
     image: '/eoatmodel.png',
@@ -308,7 +308,7 @@ export const projects: Project[] = [
   {
     slug: 'ornament',
     title: 'Camp Randall Ornament',
-    description: '3D, lasercut ornament of my favorite college football stadium',
+    description: '3D, lasercut ornament of my favorite college football stadium.',
     category: 'Personal',
     tags: ['Laser Cutting', 'Adobe Illustrator'],
     image: '/images/ornament.jpg',
@@ -358,7 +358,7 @@ export const projects: Project[] = [
   {
     slug: 'litho-lamp',
     title: 'Resin-Printed Lithograph Lamp',
-    description: 'Lamp shade and stand designed with memorable photo moments when the light turns on',
+    description: 'Lamp shade and stand designed with memorable photo moments when the light turns on.',
     category: 'Personal',
     tags: ['3D Printing', 'Resin Printing', 'Creative'],
     image: '/lithomodel.jpg',
@@ -412,7 +412,7 @@ export const projects: Project[] = [
   {
     slug: 'parrot',
     title: 'Animatronic Parrot',
-    description: 'A 5-DOF animatronic bird designed to iterate',
+    description: 'A 5-DOF animatronic bird designed to iterate.',
     category: 'WIP',
     tags: ['SolidWorks', 'Arduino Programming', 'Kinematics', '3D Printing'],
     image: '/images/project-robotic-arm.png',
@@ -424,15 +424,15 @@ export const projects: Project[] = [
   },
   {
     slug: 'kuka',
-    title: 'Kuka Arm',
-    description: 'Table-top sized model attraction',
+    title: '5 DOF Robotic Arm',
+    description: 'Table-top sized model attraction.',
     category: 'WIP',
     tags: ['Embedded C++', 'PCB Design', 'CAD', 'Data Logging'],
     image: '/images/project-turbine.png',
     year: '2026',
     startDate: '2026-08',
     status:
-      'This project has a very large focus on ride design. Trying to adhere to ASTM standards, I am desining a ride seat and restraint for the end of the arm, as well as designing a cycloidal drive motor, all from scratch',
+      'This project has a very large focus on ride design. Trying to adhere to ASTM standards, I am desining a ride seat and restraint for the end of the arm, as well as designing a cycloidal drive motor, all from scratch.',
     blocks: [],
   },
 ]
