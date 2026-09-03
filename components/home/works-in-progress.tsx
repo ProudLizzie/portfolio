@@ -1,4 +1,3 @@
-import { NaturalImage } from '@/components/natural-image'
 import { getWorksInProgress } from '@/lib/portfolio-data'
 
 function formatStart(startDate?: string) {
@@ -36,9 +35,6 @@ export function WorksInProgress() {
               className="grid gap-4 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
             >
               <div className="flex items-center gap-4">
-                <div className="w-16 shrink-0 overflow-hidden rounded-xl border border-border">
-                  <NaturalImage src={item.image} alt={item.title} sizes="64px" />
-                </div>
                 <p className="text-sm text-muted-foreground">{formatStart(item.startDate)}</p>
               </div>
               <div>
