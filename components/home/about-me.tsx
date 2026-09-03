@@ -27,11 +27,7 @@ export function AboutMe() {
               Hi, I&apos;m {profile.name.split(' ')[0]}.
             </h2>
             <p className="mt-5 max-w-lg text-pretty leading-relaxed text-primary-foreground/80">
-              I&apos;m a senior mechanical engineering student at UW-Madison who loves
-              blending creativity with technical rigor — from CAD and animatronics to a
-              crochet-based Etsy shop with sales in 14+ countries. My philosophy is
-              simple: if it doesn&apos;t make you smile while it&apos;s working, it&apos;s
-              not done yet.
+              I am currently a senior studying Mechanical Engineering at the University of Wisconsin-Madison with an expected graduation of May 2027. I have completed a certificate in Mathematics, with a focus on optimization, and am in the process of earning certificates in Manufacturing and Leadership.
             </p>
             <Link
               href="/about"
