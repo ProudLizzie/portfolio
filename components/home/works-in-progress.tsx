@@ -28,23 +28,29 @@ export function WorksInProgress() {
           </p>
         </div>
 
-        <div className="mt-12 space-y-8">
+        <ol className="mt-14 relative border-l border-border pl-8 md:pl-12">
           {items.map((item) => (
-            <div
-              key={item.slug}
-              className="grid gap-4 border-b border-border pb-8 md:grid-cols-[1fr_2fr] md:gap-8"
-            >
-              <div className="flex items-center gap-4">
-                <p className="text-sm text-muted-foreground">{formatStart(item.startDate)}</p>
-              </div>
-              <div>
-                <h3 className="font-serif text-xl font-semibold text-foreground">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-pretty leading-relaxed text-muted-foreground">
+            <li key={item.slug} className="relative pb-12 last:pb-0">
+              <span
+                aria-hidden
+                className="absolute -left-[calc(2rem+1px)] top-1.5 flex size-4 -translate-x-1/2 items-center justify-center md:-left-[calc(3rem+1px)]"
+              >
+                <span className="size-3 rounded-full bg-primary ring-4 ring-background" />
+              </span>
+
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-colors hover:border-primary/40 md:p-8">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 className="font-serif text-2xl font-semibold text-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="font-serif text-sm uppercase tracking-[0.15em] text-primary">
+                    {formatStart(item.startDate)}
+                  </p>
+                </div>
+                <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
                   {item.status ?? item.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
@@ -55,9 +61,9 @@ export function WorksInProgress() {
                   ))}
                 </div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )
