@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Hammer } from 'lucide-react'
 import { NaturalImage } from '@/components/natural-image'
 import type { Project } from '@/lib/portfolio-data'
 import { cn } from '@/lib/utils'
@@ -19,14 +19,21 @@ export function ProjectCard({
   const inner = (
     <>
       <div className="relative overflow-hidden">
-        <NaturalImage
-          src={project.image}
-          alt={project.title}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className={cn(
-            !isWip && 'transition-transform duration-500 group-hover:scale-105',
-          )}
-        />
+        {isWip ? (
+          <div className="flex aspect-[4/3] flex-col items-center justify-center gap-3 bg-secondary">
+            <Hammer className="size-8 text-secondary-foreground/60" aria-hidden />
+            <span className="font-serif text-xs uppercase tracking-[0.18em] text-secondary-foreground/70">
+              Work in Progress
+            </span>
+          </div>
+        ) : (
+          <NaturalImage
+            src={project.image}
+            alt={project.title}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
         <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
           {isWip ? 'In Progress' : project.category}
         </span>
