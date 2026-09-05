@@ -112,27 +112,7 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: 'jelly',
-    title: 'Animatronic Jellyfish',
-    description:
-      'Small scale animatronic Jellyfish to create an immersive ocean feel in a dark ride attraction.',
-    category: 'Key',
-    tags: ['Solidworks', 'Arduino Programming', 'Laser Cutting', '3D Printing'],
-    image: '/images/jelly.png',
-    year: '2026',
-    blocks: [
-      {
-        type: 'text',
-        text: 'Hopeing to be relatively small, I designed an umbrella-like mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
-      },
-      {
-        type: 'image',
-        src: '/images/jelbefaft.jpg',
-        caption: 'Jellyfish before and after decorative elements',
-      },
-    ],
-  },
+  
   {
     slug: 'octo',
     title: '5 DOF Animatronic Octopus',
@@ -155,6 +135,64 @@ export const projects: Project[] = [
         type: 'text',
         text: 'With the hinge mechanism solved, I turned to aesthetics and making the assembly actually look like a tentacle. Designed in Onshape, the shape came together relatively quickly. A bracket and pulley were added at the end to guide the string running through the length of the tentacle. By wrapping the string in opposite directions, the tentacle achieves a beautifully organic, sweeping motion, all driven by a single motor. This paired pretty well with one of my team members octopus body, and overall gave a great effect for our final scene, which will be refined even more next year!',
       },
+    ],
+  },
+  {
+    slug: 'jelly',
+    title: 'Animatronic Jellyfish',
+    description:
+      'Small scale animatronic Jellyfish to create an immersive ocean feel in a dark ride attraction.',
+    category: 'Key',
+    tags: ['Solidworks', 'Arduino Programming', 'Laser Cutting', '3D Printing'],
+    image: '/images/jelly.png',
+    year: '2026',
+    blocks: [
+      {
+        type: 'text',
+        text: 'Hopeing to be relatively small, I designed an umbrella-like mechanism with a few parts to 3D prints and some to laser cut. With keeping a simple base and adding movement through a motor, I hope to make the jellyfish come to life with a pink sheer fabric and some ribbon to simulate the tentacles. The motion of them was all coded in C++ and transferred to servo motors via an arduino',
+      },
+      {
+        type: 'image',
+        src: '/images/jelbefaft.jpg',
+        caption: 'Jellyfish before and after decorative elements',
+      },
+    ],
+  },
+  {
+    slug: 'injection',
+    title: 'Injection Molding Studies',
+    description:
+      'A snippet of my work from Intro to Injection Molding',
+    category: 'Key',
+    tags: ['Moldex3D', 'Plastics Properties', 'Manufacturing'],
+    image: '/images/jelly.png',
+    year: '2025',
+    blocks: [
+      {
+        type: 'text',
+        text: 'This class has had a really big impact on my studies at UW-Madison. As one of the first technical elective courses I took, it was refreshing to have a more niche class taught by a professor with a true passion for the content, which in turn, gave me more of an interest. I learned a lot in this course about plastics manufacturing, specifically injection molding, and I am proud to share it!',
+      },
+      {
+        type: 'text',
+        text: 'Our first project was to simulate the injeciton molding process on a piece of our choice. Pairing my love of math with baking, I chose to model a pi-shaped cookie cutter made from food-safe High Density Polyethylene (HDPE). I ran simulations to control the cooling channels, entrance gate, and in-mold conditions, all in Moldex3D. In class, I presented my findings and submitted my report which is attached below.',
+      },
+      { type: 'pdf',
+       src: string,
+       title: 'Moldex3D Report',
+      }
+      {
+        type: 'text',
+        text: 'I also completed a final research project for this course. We were able to choose any specialty of injection molding, and combine our knowledge from the course entirety, as well as new research in a 5 page academic paper. For this, I chose Foam Injection Molding. ',
+      },
+      {
+        type: 'text',
+        text: 'Abstract: Foam injection molding is a specialized process of injection molding that can be a great way to save materials and production costs in the manufacturing industry. This paper examines recent developments in foam injection molding, and research was compiled to discuss its history, process, and applications. Although foam injection molding seems simple on the outside and requires minimal setup, the inability to simulate outcomes can make the process difficult to perfect. Using either physical processes, with additives in the form of supercritical fluid, or chemical processes, with powder additives that give off gas in the mold, foam injection molding can be used across a variety of industries. Current research is working towards refining surface quality and further decreasing part density, but with these issues solved, foam injection molding is sure to expand and become more prevalent in the injection molding and manufacturing world.',
+      },
+      { type: 'pdf',
+       src: string,
+       title: 'Term Project Paper on Foam Injection Molding',
+      }
+      
     ],
   },
   // {
