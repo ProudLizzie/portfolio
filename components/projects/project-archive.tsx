@@ -2,20 +2,30 @@
 
 import { useMemo, useState } from 'react'
 import { cn } from '@/lib/utils'
-import { projects, type ProjectCategory } from '@/lib/portfolio-data'
+import { projects, type Project, type ProjectCategory } from '@/lib/portfolio-data'
 import { ProjectCard } from '@/components/project-card'
 
-type Filter = 'All' | ProjectCategory
+type Filter = 'All' | Exclude<ProjectCategory, 'Key'>
 type Sort = 'Newest' | 'Oldest' | 'A–Z'
 
-const filters: Filter[] = ['All', 'Key', 'Personal', 'Academic', 'Professional', 'WIP']
+const filters: Filter[] = ['All', 'Personal', 'Academic', 'Professional', 'WIP']
+
+// On the archive, a Key project is shown under its real category with no key
+// badge. Everything else keeps its own category.
+function archiveProject(p: Project): Project {
+  return p.category === 'Key'
+    ? { ...p, category: p.archiveCategory ?? 'Personal' }
+    : p
+}
 
 export function ProjectArchive({ initialFilter = 'All' }: { initialFilter?: Filter }) {
   const [filter, setFilter] = useState<Filter>(initialFilter)
   const [sort, setSort] = useState<Sort>('Newest')
 
   const visible = useMemo(() => {
-    const list = projects.filter((p) => (filter === 'All' ? true : p.category === filter))
+    const list = projects
+      .map(archiveProject)
+      .filter((p) => (filter === 'All' ? true : p.category === filter))
     return [...list].sort((a, b) => {
       if (sort === 'A–Z') return a.title.localeCompare(b.title)
       if (sort === 'Oldest') return Number(a.year) - Number(b.year)

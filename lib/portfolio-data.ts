@@ -42,6 +42,10 @@ export type Project = {
   title: string
   description: string
   category: ProjectCategory
+  // Key projects keep `category: 'Key'` so the home page Key Projects section,
+  // gallery, and PDF stay unchanged. On the Projects archive page they are
+  // instead grouped and displayed under this real category, with no key badge.
+  archiveCategory?: 'Personal' | 'Academic' | 'Professional'
   tags: string[]
   image: string
   year: string
@@ -119,6 +123,7 @@ export const projects: Project[] = [
     description:
       'An animatronic octopus with flexible arms designed with thorough plastic manufacturing iteration.',
     category: 'Key',
+    archiveCategory: 'Personal',
     tags: ['Mechanical Design', 'Life Cycle Study', 'Plastics Manufacturing', 'Iterative Development'],
     image: '/octojelly.png',
     year: '2026',
@@ -143,6 +148,7 @@ export const projects: Project[] = [
     description:
       'Small scale animatronic Jellyfish to create an immersive ocean feel in a dark ride attraction.',
     category: 'Key',
+    archiveCategory: 'Academic',
     tags: ['Solidworks', 'Arduino Programming', 'Laser Cutting', '3D Printing'],
     image: '/images/jelly.png',
     year: '2026',
@@ -164,6 +170,7 @@ export const projects: Project[] = [
     description:
       'A snippet of my work from Intro to Injection Molding',
     category: 'Key',
+    archiveCategory: 'Academic',
     tags: ['Moldex3D', 'Plastics Properties', 'Manufacturing'],
     image: '/molding.png',
     year: '2025',
