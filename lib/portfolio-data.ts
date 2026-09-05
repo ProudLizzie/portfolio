@@ -165,7 +165,7 @@ export const projects: Project[] = [
       'A snippet of my work from Intro to Injection Molding',
     category: 'Key',
     tags: ['Moldex3D', 'Plastics Properties', 'Manufacturing'],
-    image: '/images/jelly.png',
+    image: '/molding.png',
     year: '2025',
     blocks: [
       {
@@ -177,7 +177,7 @@ export const projects: Project[] = [
         text: 'Our first project was to simulate the injeciton molding process on a piece of our choice. Pairing my love of math with baking, I chose to model a pi-shaped cookie cutter made from food-safe High Density Polyethylene (HDPE). I ran simulations to control the cooling channels, entrance gate, and in-mold conditions, all in Moldex3D. In class, I presented my findings and submitted my report which is attached below.',
       },
       { type: 'pdf',
-       src: string,
+       src: '/midterm.pdf',
        title: 'Moldex3D Report',
       }
       {
@@ -189,7 +189,7 @@ export const projects: Project[] = [
         text: 'Abstract: Foam injection molding is a specialized process of injection molding that can be a great way to save materials and production costs in the manufacturing industry. This paper examines recent developments in foam injection molding, and research was compiled to discuss its history, process, and applications. Although foam injection molding seems simple on the outside and requires minimal setup, the inability to simulate outcomes can make the process difficult to perfect. Using either physical processes, with additives in the form of supercritical fluid, or chemical processes, with powder additives that give off gas in the mold, foam injection molding can be used across a variety of industries. Current research is working towards refining surface quality and further decreasing part density, but with these issues solved, foam injection molding is sure to expand and become more prevalent in the injection molding and manufacturing world.',
       },
       { type: 'pdf',
-       src: string,
+       src: '/term.pdf',
        title: 'Term Project Paper on Foam Injection Molding',
       }
       
