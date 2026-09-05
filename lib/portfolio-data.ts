@@ -179,7 +179,7 @@ export const projects: Project[] = [
       { type: 'pdf',
        src: '/midterm.pdf',
        title: 'Moldex3D Report',
-      }
+      },
       {
         type: 'text',
         text: 'I also completed a final research project for this course. We were able to choose any specialty of injection molding, and combine our knowledge from the course entirety, as well as new research in a 5 page academic paper. For this, I chose Foam Injection Molding. ',
