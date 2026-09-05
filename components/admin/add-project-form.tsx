@@ -755,11 +755,7 @@ export function AddProjectForm() {
       {/* Publish */}
       <section className="space-y-5 border-t border-border pt-8">
         <SectionTitle>Publish</SectionTitle>
-        <Field
-          label="GitHub personal access token"
-          htmlFor="p-token"
-          hint="Needs Contents: read & write on ProudLizzie/portfolio. Stored only in this browser, never committed."
-        >
+        <Field label="GitHub personal access token" htmlFor="p-token">
           <input
             id="p-token"
             type="password"
@@ -769,6 +765,45 @@ export function AddProjectForm() {
             placeholder="github_pat_…"
             autoComplete="off"
           />
+          <div className="mt-2 space-y-2 rounded-lg border border-border bg-muted/40 p-3 text-xs leading-relaxed text-muted-foreground">
+            <p className="text-foreground">
+              This is what lets the form save your new project. It uploads your files and
+              commits the change to the{' '}
+              <span className="font-medium">ProudLizzie/portfolio</span> repo on your behalf,
+              so the token is how GitHub knows the change is authorized by you.
+            </p>
+            <p>To create one:</p>
+            <ol className="list-decimal space-y-1 pl-4">
+              <li>
+                Open{' '}
+                <a
+                  href="https://github.com/settings/personal-access-tokens/new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-medium text-foreground underline underline-offset-2"
+                >
+                  GitHub fine-grained tokens
+                  <ExternalLink className="size-3" />
+                </a>
+                .
+              </li>
+              <li>
+                Under <span className="font-medium">Repository access</span>, pick{' '}
+                <span className="font-medium">Only select repositories</span> and choose{' '}
+                <span className="font-medium">ProudLizzie/portfolio</span>.
+              </li>
+              <li>
+                Under <span className="font-medium">Repository permissions</span>, set{' '}
+                <span className="font-medium">Contents</span> to{' '}
+                <span className="font-medium">Read and write</span>.
+              </li>
+              <li>Generate the token, then paste it above.</li>
+            </ol>
+            <p>
+              It is stored only in this browser (never committed to the repo) and is reused
+              next time you open this page.
+            </p>
+          </div>
         </Field>
 
         {phase === 'success' && (
