@@ -49,7 +49,7 @@ export function FeaturedProjects() {
 
               <div className={i % 2 === 1 ? 'md:order-1' : ''}>
                 <span className="text-sm text-muted-foreground">
-                  {String(i + 1).padStart(2, '0')} / {project.year}
+                  {project.year}
                 </span>
                 <Link href={`/projects/${project.slug}`}>
                   <h3 className="mt-2 font-serif text-3xl font-semibold text-foreground transition-colors hover:text-primary">

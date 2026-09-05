@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: 'A full archive of mechanical engineering projects across key, personal, school, and professional categories.',
 }
 
-type Filter = 'All' | 'Key' | 'Personal' | 'Academic' | 'Professional'
-const validFilters: Filter[] = ['All', 'Key', 'Personal', 'Academic', 'Professional']
+type Filter = 'All' | 'Personal' | 'Academic' | 'Professional'
+const validFilters: Filter[] = ['All', 'Personal', 'Academic', 'Professional']
 
 export default async function ProjectsPage({
   searchParams,
