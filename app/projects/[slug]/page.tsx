@@ -225,6 +225,14 @@ export default async function ProjectDetailPage({
                   Specs
                 </h2>
                 <dl className="mt-5 space-y-5 text-sm">
+                  {project.specs?.map((spec) => (
+                    <div key={spec.label}>
+                      <dt className="text-xs uppercase tracking-wide text-muted-foreground">
+                        {spec.label}
+                      </dt>
+                      <dd className="mt-1 font-medium text-foreground">{spec.value}</dd>
+                    </div>
+                  ))}
                   <div>
                     <dt className="text-xs uppercase tracking-wide text-muted-foreground">
                       Category
