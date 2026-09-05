@@ -138,6 +138,7 @@ export function AddProjectForm() {
 
   const [title, setTitle] = useState('')
   const [category, setCategory] = useState<ProjectCategory>('Personal')
+  const [isKey, setIsKey] = useState(false)
   const [year, setYear] = useState(String(new Date().getFullYear()))
   const [description, setDescription] = useState('')
   const [coverFile, setCoverFile] = useState<File | null>(null)
@@ -324,11 +325,20 @@ export function AddProjectForm() {
         .filter((s) => s.label.trim() && s.value.trim())
         .map((s) => ({ label: s.label.trim(), value: s.value.trim() }))
 
+      // A key project keeps `category: 'Key'` (drives the home page Key Projects
+      // section) and records its real archive bucket in `archiveCategory`. Key is
+      // never combined with WIP, so `category` here is always one of the three
+      // archive categories at this point.
+      const keyProject = isKey && !isWip
+
       const project: Project = {
         slug,
         title: title.trim(),
         description: description.trim(),
-        category,
+        category: keyProject ? 'Key' : category,
+        ...(keyProject
+          ? { archiveCategory: category as 'Personal' | 'Academic' | 'Professional' }
+          : {}),
         tags,
         image,
         year: year.trim(),
@@ -378,7 +388,11 @@ export function AddProjectForm() {
               id="p-category"
               className={inputClass}
               value={category}
-              onChange={(e) => setCategory(e.target.value as ProjectCategory)}
+              onChange={(e) => {
+                const next = e.target.value as ProjectCategory
+                setCategory(next)
+                if (next === 'WIP') setIsKey(false)
+              }}
             >
               {CATEGORIES.map((c) => (
                 <option key={c} value={c}>
@@ -399,6 +413,24 @@ export function AddProjectForm() {
             />
           </Field>
         </div>
+
+        {!isWip && (
+          <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-input bg-background p-3.5 shadow-sm transition-colors hover:bg-muted/50">
+            <input
+              type="checkbox"
+              checked={isKey}
+              onChange={(e) => setIsKey(e.target.checked)}
+              className="mt-0.5 size-4 accent-primary"
+            />
+            <span className="text-sm">
+              <span className="font-medium text-foreground">Key project</span>
+              <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
+                Features this project in the Key Projects section on the home page. On the Projects
+                archive it still appears under {category}.
+              </span>
+            </span>
+          </label>
+        )}
 
         <Field label="Short description" htmlFor="p-desc" hint="One line shown on project cards.">
           <textarea

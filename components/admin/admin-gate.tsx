@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, type FormEvent } from 'react'
-import { Lock, LogOut } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowLeft, Lock, LogOut } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AddProjectForm } from '@/components/admin/add-project-form'
 
@@ -114,6 +115,14 @@ export function AdminGate() {
         <Button type="submit" size="lg" disabled={checking || !password} className="mt-5 w-full">
           {checking ? 'Checking…' : 'Unlock'}
         </Button>
+
+        <Link
+          href="/"
+          className="mt-5 inline-flex items-center gap-1.5 text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+        >
+          <ArrowLeft className="size-3.5" aria-hidden />
+          Back to home
+        </Link>
       </form>
     </main>
   )
