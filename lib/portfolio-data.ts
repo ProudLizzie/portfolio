@@ -49,6 +49,9 @@ export type Project = {
   tags: string[]
   image: string
   year: string
+  // Optional freeform spec rows (label/value) shown in the detail page sidebar,
+  // above the fixed Category / Year / Tools fields.
+  specs?: { label: string; value: string }[]
   blocks: ProjectBlock[]
   // WIP-only fields. `startDate` (YYYY-MM) orders the Works in Progress
   // timeline oldest-first; `status` is the mid-length progress description.
