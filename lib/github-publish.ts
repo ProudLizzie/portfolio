@@ -6,13 +6,14 @@
 //
 // No token is ever hardcoded or persisted server-side.
 
-import type { Project } from '@/lib/portfolio-data'
+import type { MediaMention, Project } from '@/lib/portfolio-data'
 
 const OWNER = 'ProudLizzie'
 const REPO = 'portfolio'
 const BRANCH = 'main'
 const DATA_PATH = 'lib/portfolio-data.ts'
 const PROJECTS_ANCHOR = 'export const projects: Project[] = ['
+const MEDIA_ANCHOR = 'export const mediaMentions: MediaMention[] = ['
 
 const TOKEN_KEY = 'portfolio-admin-gh-token'
 
@@ -234,6 +235,46 @@ export async function commitNewProject(token: string, project: Project): Promise
     DATA_PATH,
     utf8ToBase64(updated),
     `Add project: ${project.title} via admin`,
+    sha,
+  )
+
+  return result?.commit?.html_url ?? ''
+}
+
+// Rewrites the entire `mediaMentions` array with the provided list and commits
+// it. Unlike projects (which only ever append), media mentions support edit and
+// delete, so the whole array is replaced each save. The array literal always
+// closes with a "\n]" at column 0, which is used as the replacement boundary;
+// element/object closings are indented and never match it.
+export async function commitMediaMentions(
+  token: string,
+  mentions: MediaMention[],
+  summary: string,
+): Promise<string> {
+  const { content, sha } = await getDataFile(token)
+
+  const idx = content.indexOf(MEDIA_ANCHOR)
+  if (idx === -1) {
+    throw new Error('Could not locate the media mentions array in the data file. It may have changed.')
+  }
+
+  const arrayStart = idx + MEDIA_ANCHOR.length
+  const closeAt = content.indexOf('\n]', arrayStart)
+  if (closeAt === -1) {
+    throw new Error('Could not find the end of the media mentions array in the data file.')
+  }
+
+  const body = mentions.length
+    ? '\n' + mentions.map((m) => `${pad(1)}${serializeValue(m, 1)},`).join('\n')
+    : ''
+
+  const updated = content.slice(0, arrayStart) + body + content.slice(closeAt)
+
+  const result = await putFile(
+    token,
+    DATA_PATH,
+    utf8ToBase64(updated),
+    `${summary} via admin`,
     sha,
   )
 
