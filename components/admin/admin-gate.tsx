@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { ArrowLeft, Lock, LogOut } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AddProjectForm } from '@/components/admin/add-project-form'
+import { MediaMentionsForm } from '@/components/admin/media-mentions-form'
+import { cn } from '@/lib/utils'
 
 // SHA-256 of the admin password. Only the hash lives in the repo; the plaintext
 // is never stored. The gate is client-side (this is a static site), so treat it
@@ -23,6 +25,7 @@ export function AdminGate() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
   const [checking, setChecking] = useState(false)
+  const [tab, setTab] = useState<'projects' | 'media'>('projects')
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -50,11 +53,12 @@ export function AdminGate() {
               Admin
             </p>
             <h1 className="mt-2 text-balance font-serif text-3xl font-semibold text-foreground md:text-4xl">
-              Add a project
+              {tab === 'projects' ? 'Add a project' : 'Media mentions'}
             </h1>
             <p className="mt-2 max-w-prose text-pretty leading-relaxed text-muted-foreground">
-              Fill out the fields below and publish. Assets are uploaded and the project data file
-              is committed directly to GitHub, so the new project goes live once the site rebuilds.
+              {tab === 'projects'
+                ? 'Fill out the fields below and publish. Assets are uploaded and the project data file is committed directly to GitHub, so the new project goes live once the site rebuilds.'
+                : 'Add, edit, or remove press mentions. Changes are committed directly to GitHub and appear on the home and about pages once the site rebuilds.'}
             </p>
           </div>
           <Button
@@ -68,8 +72,38 @@ export function AdminGate() {
             Lock
           </Button>
         </div>
+
+        <div
+          role="tablist"
+          aria-label="Admin sections"
+          className="mt-8 inline-flex gap-1 rounded-xl border border-border bg-muted/40 p-1"
+        >
+          {(
+            [
+              { key: 'projects', label: 'Projects' },
+              { key: 'media', label: 'Media Mentions' },
+            ] as const
+          ).map((t) => (
+            <button
+              key={t.key}
+              type="button"
+              role="tab"
+              aria-selected={tab === t.key}
+              onClick={() => setTab(t.key)}
+              className={cn(
+                'rounded-lg px-4 py-2 text-sm font-medium transition-colors',
+                tab === t.key
+                  ? 'bg-background text-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground',
+              )}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
         <div className="mt-10">
-          <AddProjectForm />
+          {tab === 'projects' ? <AddProjectForm /> : <MediaMentionsForm />}
         </div>
       </main>
     )

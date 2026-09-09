@@ -5,6 +5,7 @@ import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { NaturalImage } from '@/components/natural-image'
 import { PageHeader } from '@/components/page-header'
+import { MediaMentions } from '@/components/media-mentions'
 import { profile, stats, skills, education, experience, certificates } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
@@ -77,6 +78,8 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          <MediaMentions variant="detailed" className="mt-16 border-t border-border pt-12" />
         </section>
 
         <section className="border-t border-border/60 bg-card/40">

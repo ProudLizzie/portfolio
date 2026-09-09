@@ -602,3 +602,42 @@ export const navLinks = [
   { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
 ]
+
+// A press mention / feature: an outlet or headline, a thumbnail photo, and an
+// external link to the article. `date` (YYYY-MM-DD or YYYY-MM) is optional and
+// only used for sorting; `excerpt` is an optional short pull-quote shown in the
+// more detailed About-page layout.
+export type MediaMention = {
+  id: string
+  title: string
+  photo: string
+  link: string
+  date?: string
+  excerpt?: string
+}
+
+export const mediaMentions: MediaMention[] = [
+  {
+    id: 'sample-uw-engineering',
+    title: 'UW-Madison Engineering: Students bring animatronics to life',
+    photo: '/images/media/uw-engineering-feature.png',
+    link: 'https://engineering.wisc.edu/',
+    date: '2026-03-14',
+    excerpt:
+      'A profile of the student-led builds blending mechanical design with themed entertainment on campus.',
+  },
+  {
+    id: 'sample-themed-entertainment',
+    title: 'Themed Entertainment Spotlight: Badgers in Themed Entertainment',
+    photo: '/images/media/themed-entertainment-spotlight.png',
+    link: 'https://www.teaconnect.org/',
+    date: '2025-11-02',
+    excerpt:
+      'How a new student org is designing model dark rides and attractions from the ground up.',
+  },
+]
+
+// Media mentions ordered newest first (undated items sort last).
+export function getMediaMentions() {
+  return [...mediaMentions].sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
+}

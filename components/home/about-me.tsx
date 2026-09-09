@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { NaturalImage } from '@/components/natural-image'
+import { MediaMentions } from '@/components/media-mentions'
 import { profile } from '@/lib/portfolio-data'
 
 export function AboutMe() {
@@ -38,6 +39,8 @@ export function AboutMe() {
             </Link>
           </div>
         </div>
+
+        <MediaMentions tone="onPrimary" className="mt-16 md:mt-20" />
       </div>
     </section>
   )
