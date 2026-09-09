@@ -63,6 +63,34 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "restaurant-renovation-project",
+    title: "Restaurant Renovation Project",
+    description: "New Kitchen layout and designs for Busch Gardens Williamsburg",
+    category: "Professional",
+    tags: [
+      "Solidworks",
+      "Safety Design",
+      "Presentation",
+    ],
+    image: "/images/restaurant-renovation-project-bgw-mtudy0u8z00w.png",
+    year: "2026",
+    blocks: [
+      {
+        type: "text",
+        text: "As our end of summer project, a team and I redesigned one of the kitchens in Busch Gardens. Currently used as a catering kitchen only, we decided to add a new front of house layout to sell new bakery items. Themed to match the Italian carnival nearby, our roman marketplace would sell pastries, drinks, and specialty items to make a profit.",
+      },
+      {
+        type: "text",
+        text: "My role on this project was to design the kitchen layout, and report back costs for my designs. I worked heavily with the in-park design and engineering team and the head chef to come up with a reasonable floorplan given the space. I also researched fire safety codes to put together an NFPA96-compliant fire suppression system, as well as model and design the front of house area for guests. Our final presentation was given to park management, who really appreciated our attention to detail in cost calculations and safety considerations. Our final presentation is shown below.",
+      },
+      {
+        type: "pdf",
+        src: "/pdfs/restaurant-renovation-project-bgw-internship-project-fornax-s-fork-mtudy1z9jpto.pdf",
+        title: "Project Slides",
+      },
+    ],
+  },
+  {
     slug: 'blast-off',
     title: 'Bucky Blast Off',
     description: 'A table-top sized pneumatic launching coaster',
