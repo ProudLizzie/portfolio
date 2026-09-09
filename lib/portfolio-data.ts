@@ -641,6 +641,14 @@ export const mediaMentions: MediaMention[] = [
     date: "2026-03-11",
     excerpt: "Publication from the College of Engineering, where I was interviewed by Jason Daley",
   },
+  {
+    id: "zdm2x8a3",
+    title: "TAKE A BITE OUT OF STARTING A NEW CLUB",
+    photo: "/images/take-a-bite-out-of-starting-a-new-club-take-a-bite-mtukl5fr1y11.jpg",
+    link: "https://wisconsinengineer.com/2026/08/29/take-a-bite-out-of-starting-a-new-club/",
+    date: "2026-08-29",
+    excerpt: "Article posted by Wisconsin Engineering Magazine, interviewed by Leo Mazzocco",
+  },
 ]
 
 // Media mentions ordered newest first (undated items sort last).
