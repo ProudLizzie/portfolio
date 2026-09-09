@@ -618,28 +618,12 @@ export type MediaMention = {
 
 export const mediaMentions: MediaMention[] = [
   {
-    id: "sample-uw-engineering",
-    title: "UW-Madison Engineering: Students bring animatronics to life",
-    photo: "/images/media/uw-engineering-feature.png",
-    link: "https://engineering.wisc.edu/news/in-the-loop-new-student-organization-is-taking-badgers-for-a-ride",
-    date: "2026-03-14",
-    excerpt: "A profile of the student-led builds blending mechanical design with themed entertainment on campus.",
-  },
-  {
-    id: "sample-themed-entertainment",
-    title: "Themed Entertainment Spotlight: Badgers in Themed Entertainment",
-    photo: "/images/media/themed-entertainment-spotlight.png",
-    link: "https://wisconsinengineer.com/2026/08/29/take-a-bite-out-of-starting-a-new-club",
-    date: "2025-11-02",
-    excerpt: "How a new student org is designing model dark rides and attractions from the ground up.",
-  },
-  {
     id: "g8pyarhw",
     title: "In the loop: New student organization is taking Badgers for a ride",
     photo: "/images/in-the-loop-new-student-organization-is-taking-badgers-for-a-ride-engineering-expo-team-jh-2048x1152-mtukhxeogk3r.avif",
     link: "https://engineering.wisc.edu/news/in-the-loop-new-student-organization-is-taking-badgers-for-a-ride/",
     date: "2026-03-11",
-    excerpt: "Publication from the College of Engineering, where I was interviewed by Jason Daley",
+    excerpt: "Publication from the College of Engineering, interviewed by Jason Daley",
   },
   {
     id: "zdm2x8a3",
