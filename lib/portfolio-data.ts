@@ -621,7 +621,7 @@ export const mediaMentions: MediaMention[] = [
     id: 'sample-uw-engineering',
     title: 'UW-Madison Engineering: Students bring animatronics to life',
     photo: '/images/media/uw-engineering-feature.png',
-    link: 'https://engineering.wisc.edu/',
+    link: 'https://engineering.wisc.edu/news/in-the-loop-new-student-organization-is-taking-badgers-for-a-ride',
     date: '2026-03-14',
     excerpt:
       'A profile of the student-led builds blending mechanical design with themed entertainment on campus.',
@@ -630,7 +630,7 @@ export const mediaMentions: MediaMention[] = [
     id: 'sample-themed-entertainment',
     title: 'Themed Entertainment Spotlight: Badgers in Themed Entertainment',
     photo: '/images/media/themed-entertainment-spotlight.png',
-    link: 'https://www.teaconnect.org/',
+    link: 'https://wisconsinengineer.com/2026/08/29/take-a-bite-out-of-starting-a-new-club',
     date: '2025-11-02',
     excerpt:
       'How a new student org is designing model dark rides and attractions from the ground up.',
