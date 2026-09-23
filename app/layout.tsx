@@ -16,10 +16,24 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Elizabeth Janicek — Mechanical Engineering Portfolio',
+  metadataBase: new URL('https://elizabethjanicek.com'),
+  title: 'Elizabeth Janicek — Mechanical Design Engineer',
   description:
-    'Portfolio of Elizabeth Janicek, a senior mechanical engineering student.',
+    'Aspiring mechanical design engineer specializing in robotics and manufacturing — animatronics, injection molding, and iterative product design.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'Elizabeth Janicek — Mechanical Design Engineer',
+    description:
+      'Aspiring mechanical design engineer specializing in robotics and manufacturing — animatronics, injection molding, and iterative product design.',
+    type: 'website',
+    siteName: 'Elizabeth Janicek',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Elizabeth Janicek — Mechanical Design Engineer',
+    description:
+      'Aspiring mechanical design engineer specializing in robotics and manufacturing — animatronics, injection molding, and iterative product design.',
+  },
 }
 
 export const viewport: Viewport = {
